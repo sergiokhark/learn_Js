@@ -1,2 +1,2 @@
-let arr = ['a', 'b', 'c', 'd'];
-alert(arr[0] + '+' + arr[1] + '+' + arr[2] + '+' + arr[3]); 
+let arr = [1, 2, 3];
+alert(Number(arr[0]) + Number(arr[1]) + Number(arr[2]));
