@@ -1,6 +1,5 @@
-let arr = [2, 5, 3, 9];
-arr[0] += 3;
-arr[1] += 3;
-arr[2] += 3;
-arr[3] += 3;
+let arr = [1, 2, 3];
+arr[0]++;
+arr[1]++;
+arr[2]++;
 alert(arr);
