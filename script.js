@@ -1,2 +1,3 @@
-let arr = [1, 2, 3];
-alert(Number(arr[0]) + Number(arr[1]) + Number(arr[2]));
+let arr = [2, 5, 3, 9];
+let result = Number(arr[0] * arr[1]) + Number(arr[2] * arr[3]);
+alert(result);
