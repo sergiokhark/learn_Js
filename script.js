@@ -1,2 +1,3 @@
-let obj = { a: 1, b: 2, c: 3 };
-console.log(obj['a'] + obj['b'] + obj['c']);
+let obj = { key1: 1, key2: 2, key3: 3 };
+
+alert(obj.key1 + obj.key2 + obj.key3);
