@@ -1,5 +1,2 @@
-let arr = [1, 2, 3];
-arr[0]++;
-arr[1]++;
-arr[2]++;
-alert(arr);
+let obj = { a: 1, b: 2, c: 3 };
+console.log(obj['a'] + obj['b'] + obj['c']);
