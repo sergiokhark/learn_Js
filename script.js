@@ -1,2 +1,5 @@
-let date = { year: 2022, month: 06, day: 18 };
-alert(date.year + '-' + date.month + '-' + date.day);
+let obj = {};
+obj.a = 1;
+obj.b = 2;
+obj.c = 3;
+console.log(obj);
