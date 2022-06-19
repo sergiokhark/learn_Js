@@ -1,13 +1,10 @@
-let num = 45;
-if (num < 10 || num > 99) {
-    alert('Число меньше 10 или больше 99');
-} else {
-    let first_digit = parseInt(num / 10);
-    let sec_digit = num % 10;
-    let sum_digit = first_digit + sec_digit;
-    if (sum_digit <= 9) {
-        alert('Сумма цифр однозначна');
-    } else {
-        alert('Сумма цифр двузначна');
-    }
-}
+let min = 5;
+if (min >= 1 && min <= 20) {
+    alert('Первая треть часа');
+} else if (min >= 21 && min <= 40) {
+    alert('Вторая треть часа');
+} else if (min >= 41 && min <= 60) {
+    alert('Третья треть часа')
+} else { 
+    alert('Неправильный ввод')
+} 
