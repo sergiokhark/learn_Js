@@ -1,7 +1,7 @@
-let num1 = 1;
-let num2 = 10;
-if (num1 <= 1 && num2 >= 3) {
-    alert('Верно');
+let test = NaN;
+		
+if (test == false) {
+	alert('верно');
 } else {
-    alert('Не верно');
+	alert('неверно');
 }
