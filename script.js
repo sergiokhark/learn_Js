@@ -1,7 +1,4 @@
-let num = 132345;
+let num = 999;
 let str = String(num);
-if (str[0] == 1 || str[0] == 2 || str[0] == 3) {
-    alert('Yes');
-} else {
-    alert('No');
-}
+let sum = Number(str[0]) + Number(str[1]) + Number(str[2]);
+alert(sum);
