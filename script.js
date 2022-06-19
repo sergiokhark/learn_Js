@@ -1,9 +1,17 @@
-let num = 127226;
-let str = String(num);
-let sum1 = Number(str[0]) + Number(str[1]) + Number(str[2]);
-let sum2 = Number(str[3]) + Number(str[4]) + Number(str[5]);
-if (sum1 == sum2) {
-    alert('Yes');
-} else {
-    alert('No');
+num = 3;
+switch (num) {
+    case 1:
+        alert('Зима');
+        break;
+    case 2:
+        alert('Весна');
+        break;
+    case 3:
+        alert('Лето');
+        break;
+    case 4:
+        alert('Осень');
+        break;
+    default:
+        alert('Ошибка');
 }
