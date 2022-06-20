@@ -1,6 +1,8 @@
-let obj = { a: 1, b: 2, c: 3, d: 4, e: 5 };
-let sum = 0;
-for (let key in obj) {
-    sum += obj[key]
+let arr = [1, 5, 6, 7, 0, 15, 18, 22];
+for (let elem of arr) {
+    if (elem != 0) {
+        console.log(elem);
+    } else {
+        break
+    }
 }
-console.log(sum);
