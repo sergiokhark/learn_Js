@@ -1,5 +1,5 @@
-let mult = 1;
-for (let i = 1; i <= 20; i++) {
-    mult *= i;
+let summ = 0;
+for (let i = 2; i <= 100; i += 2) {
+    summ += i;
 }
-console.log(mult);
+console.log(summ);
