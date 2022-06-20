@@ -1,6 +1,6 @@
-let summ = 0;
-let arr = [1, 2, 3, 4, 5];
-for (let i = 0; i < arr.length; i++) {
-    summ += arr[i] ** 2;
+let arr = [2, 5, 9, 15, 1, 4];
+for (i = 0; i < arr.length; i++) {
+    if (arr[i] > 3 && arr[i] < 10) {
+        console.log(arr[i]);
+    }
 }
-console.log(summ);
