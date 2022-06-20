@@ -1,7 +1,12 @@
-let sum = 0;
-let count = 1;
-while (sum <= 100) {
-    sum += count;
-    count++;
+let arr = ['a', 'b', 'c', 'd', 'e'];
+let flag = false;
+for (let elem of arr) {
+    if (elem == 'c') {
+        flag = true;
+    }
 }
-console.log(count);
+if (flag === true) {
+    console.log('Yes');
+} else {
+    console.log('No');
+}
