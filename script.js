@@ -1,3 +1,5 @@
-let num = 15;
-let result = num >= 0 ? 1 : -1;
-alert(result);
+let i = 1;
+while (i <= 100) {
+    console.log(i);
+    i++
+}
