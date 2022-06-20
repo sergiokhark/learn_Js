@@ -1,6 +1,4 @@
-let arr = [10, 2, 30, 50, 5, 3000, 7];
-
+let arr = ['пн', 'вт', 'ср', 'чт', 'пт', 'сб', 'вс'];
 for (let i = 0; i < arr.length; i++) {
-    document.write(arr[i] + '<br>');
-    
+    document.write('<b>' + arr[i] + '</b>' + '&nbsp');
 }
