@@ -1,8 +1,9 @@
-let summ = 0;
-let result;
-let arr = [1, 2, 3, 4, 5];
+let arr = [10, 20, 30, 50, 235, 3000];
+let str;
+
 for (let i = 0; i < arr.length; i++) {
-    summ += arr[i];
+    str = String(arr[i]);
+    if (str[0] == 1 || str[0] == 2 || str[0] == 5) {
+        console.log(arr[i]);
+    }
 }
-result = summ / arr.length;
-console.log(result);
