@@ -1,12 +1,9 @@
-let arr = ['a', 'b', 'c', 'd', 'e'];
-let flag = false;
-for (let elem of arr) {
-    if (elem == 'c') {
-        flag = true;
+let num = 11;
+flag = true;
+for (let i = 2; i < num; i++) {
+    if (num % i == 0) {
+        flag = false;
+        break;
     }
 }
-if (flag === true) {
-    console.log('Yes');
-} else {
-    console.log('No');
-}
+console.log(flag);
