@@ -1,5 +1,5 @@
 let str = '';
-for (let i = 0; i < 5; i++) {
-    str += 0;
+for (let i = 1; i < 10; i++) {
+    str += i;
 }
 console.log(str);
