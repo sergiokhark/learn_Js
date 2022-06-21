@@ -1,7 +1,8 @@
-let arr1 = [1, 2, 3, 4, 5];
-let arr2 = [6, 7, 8, 9, 10];
-let res = {};
-for (let i = 0; i < arr1.length; i++) {
-    res[arr1[i]] = arr2[i]; 
+let obj = { 1: 6, 2: 7, 3: 8, 4: 9, 5: 10 };
+total_keys = 0;
+total_value = 0;
+for (let key in obj) {
+    total_keys += Number(key); //15
+    total_value += Number(obj[key]); //40
 }
-console.log(res);
+console.log(total_keys / total_value);
