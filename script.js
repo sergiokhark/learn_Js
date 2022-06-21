@@ -1,5 +1,5 @@
-for (let i = 1; i <= 3; i++) {
-    for (let j = 1; j <= 3; j++) {
-        document.write(i, j + ' ')
-    }
+let arr = [];
+for (let i = 0; i < 100; i++) {
+    arr[i] = i + 1;
 }
+console.log(arr);
