@@ -8,6 +8,8 @@ let obj = {
 	employee7: 700,
 };
 for (let key in obj) {
-    obj[key] = parseInt(obj[key] * 1.1);
+    if (obj[key] <= 400) {
+        obj[key] = parseInt(obj[key] * 1.1);
+    }
 }
 console.log(obj);
