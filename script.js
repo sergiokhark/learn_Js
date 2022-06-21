@@ -1,6 +1,13 @@
-let obj = {1: 'пн', 2: 'вт', 3: 'ср', 4: 'чт', 5: 'пт', 6: 'сб', 7: 'вс'};
-let res = {};
+let obj = {
+	employee1: 100,
+	employee2: 200,
+	employee3: 300,
+	employee4: 400,
+	employee5: 500,
+	employee6: 600,
+	employee7: 700,
+};
 for (let key in obj) {
-    res[obj[key]] = key;
+    obj[key] = parseInt(obj[key] * 1.1);
 }
-console.log(res);
+console.log(obj);
