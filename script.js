@@ -1,8 +1,6 @@
-let arr = [2, -1, -4, 5, 6, 8, 9, 11, -88];
+let arr = ['a', 'b', 'c', 'd', 'e'];
 let res = [];
-for (let elem of arr) {
-    if (elem > 0) {
-        res.push(elem);
-    }
+for (let i = arr.length - 1; i >= 0; i--) {
+    res.push(arr[i]);
 }
 console.log(res);
