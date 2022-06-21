@@ -1,7 +1,8 @@
-let arr = [];
-arr.push(1);
-arr.push(2);
-arr.push('b');
-arr.push(5);
-arr.push(6);
-console.log(arr);
+let arr = [2, -1, -4, 5, 6, 8, 9, 11, -88];
+let res = [];
+for (let elem of arr) {
+    if (elem > 0) {
+        res.push(elem);
+    }
+}
+console.log(res);
