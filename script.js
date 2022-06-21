@@ -1,5 +1,7 @@
-let arr = [5, 10, 4, 88, 7, 20];
-for (let i = 0; i < arr.length; i++) {
-    arr[i]--;
-}
+let arr = [];
+arr.push(1);
+arr.push(2);
+arr.push('b');
+arr.push(5);
+arr.push(6);
 console.log(arr);
