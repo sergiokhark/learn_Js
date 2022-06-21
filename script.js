@@ -1,9 +1,5 @@
-let num = 11;
-flag = true;
-for (let i = 2; i < num; i++) {
-    if (num % i == 0) {
-        flag = false;
-        break;
-    }
+let str = '';
+for (let i = 0; i < 5; i++) {
+    str += 0;
 }
-console.log(flag);
+console.log(str);
