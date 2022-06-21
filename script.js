@@ -1,10 +1,4 @@
-let arr = ['a', 'b', 'a', 'a', 'b', 'c', 'b', 'c'];
-let obj = {};
-for (let elem of arr) {
-    if (obj[elem] === undefined) {
-        obj[elem] = 1;
-    } else {
-        obj[elem]++;
-    }
+let arr = [1, 2, 3, 4, 5];
+for (i = 0; i < arr.length - 1; i++) {
+    console.log(arr[i + 1]);
 }
-console.log(obj);
