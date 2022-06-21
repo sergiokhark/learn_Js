@@ -1,6 +1,9 @@
-let arr = ['a', 'b', 'c', 'd', 'e'];
-let res = [];
-for (let i = arr.length - 1; i >= 0; i--) {
-    res.push(arr[i]);
-}
-console.log(res);
+let obj = {};
+obj['пн'] = 1;
+obj['вт'] = 2;
+obj['ср'] = 3;
+obj['чт'] = 4;
+obj['пт'] = 5;
+obj['сб'] = 6;
+obj['вс'] = 7;
+console.log(obj);
