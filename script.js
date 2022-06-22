@@ -1,6 +1,7 @@
-for (let i = 9; i > 0; i--) {
-    for (let j = 0; j < i; j++) {
-        document.write(i);
-    }
-    document.write('<br>')
+let arr = [];
+let str = '';
+for (let i = 0; i < 5; i++) {
+    str += 'xx';
+    arr.push(str);
 }
+console.log(arr);
