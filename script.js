@@ -1,6 +1,6 @@
-let arr = [1, 2, 3, 8, 12];
-total = 0;
-for (let elem of arr) {
-    total += elem;
+let factorial = 1;
+let num = 8;
+for (i = 1; i <= num; i++) {
+    factorial *= i;
 }
-console.log(total / arr.length);
+console.log(factorial);
