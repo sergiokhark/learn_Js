@@ -1,11 +1,8 @@
 let arr = [];
-for (let i = 0; i < 3; i++) {
+for (let i = 0, k = 1; i < 4; i++) {
     arr[i] = [];
-    for (let j = 0; j < 2; j++) {
-        arr[i][j] = [];
-        for (let k = 0; k < 5; k++) {
-            arr[i][j][k] = k + 1;
-        }
+    for (let j = 0; j < 2; j++, k++) {
+        arr[i].push(k);
     }
 }
 console.log(arr);
