@@ -1,25 +1,15 @@
-let obj = {
-	1: {
-		1: 11,
-		2: 12,
-		3: 13,
+let employees = [
+	{
+		name: 'name1',
+		salary: 300,
 	},
-	2: {
-		1: 21,
-		2: 22,
-		3: 23,
+	{
+		name: 'name2',
+		salary: 400,
 	},
-	3: {
-		1: 24,
-		2: 25,
-		3: 26,
+	{
+		name: 'name3',
+		salary: 500,
 	},
-}
-total = 0;
-for (let key in obj) {
-    let subObj = obj[key];
-    for (let subKey in subObj) {
-        total += subObj[subKey];
-    }
-}
-console.log(total);
+];
+console.log(employees[0].salary + employees[1].salary);
