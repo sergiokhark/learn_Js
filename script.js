@@ -1,3 +1,6 @@
-for (i = 2; i <= 100; i += 2) {
-    document.write(i, '<br>');
+let arr = [];
+let str = '';
+for (i = 0; i < 10; i++) {
+    arr.push('x');
 }
+console.log(arr);
