@@ -1,13 +1,21 @@
- //[[[1, 2], [3, 4]], [[5, 6], [7, 8]]]
-
-let arr = [];
-for (let i = 0, s = 1; i < 2; i++) {
-    arr[i] = [];
-    for (let j = 0; j < 2; j++) {
-        arr[i][j] = [];
-        for (let k = 0; k < 2; k++, s++) {
-            arr[i][j].push(s);
-        }
-    }
+let obj = {
+	key1: {
+		key1: 1,
+		key2: 2,
+		key3: 3,
+	},
+	key2: {
+		key1: 4,
+		key2: 5,
+		key3: 6,
+	},
+	key3: {
+		key1: 7,
+		key2: 8,
+		key3: 9,
+	},
 }
-console.log(arr);
+let total = obj.key1.key1 + obj['key1']['key2'] + obj['key1']['key3'] +
+    obj['key2']['key1'] + obj['key2']['key2'] + obj['key2']['key3'] +
+    obj['key3']['key1'] + obj['key3']['key2'] + obj.key3.key3;
+console.log(total);
