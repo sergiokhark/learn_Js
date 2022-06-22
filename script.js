@@ -12,6 +12,8 @@ let employees = [
 		salary: 500,
 	},
 ];
+total = 0;
 for (let elem of employees) {
-    document.write(elem.name + ' - ' + elem.salary + '<br>');
+    total += elem.salary
 }
+console.log(total);
