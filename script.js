@@ -1,3 +1,3 @@
-for (i = 1; i <= 100; i++) {
+for (i = 100; i >= 1; i--) {
     document.write(i, '<br>');
 }
