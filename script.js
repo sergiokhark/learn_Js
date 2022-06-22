@@ -1,7 +1,7 @@
 let arr = [];
-for (let i = 0, k = 1; i < 4; i++) {
+for (let i = 0, k = 2; i < 4; i++) {
     arr[i] = [];
-    for (let j = 0; j < 2; j++, k++) {
+    for (let j = 0; j < 3; j++, k += 2) {
         arr[i].push(k);
     }
 }
