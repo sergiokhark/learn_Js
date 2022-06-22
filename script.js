@@ -2,32 +2,32 @@ let employees = [
 	{
 		name: 'name1',
 		salary: 300,
-		age: 28,
+		dismissed: false,
 	},
 	{
 		name: 'name2',
 		salary: 400,
-		age: 29,
+		dismissed: true,
 	},
 	{
 		name: 'name3',
 		salary: 500,
-		age: 30,
+		dismissed: false,
 	},
 	{
 		name: 'name4',
 		salary: 600,
-		age: 31,
+		dismissed: true,
 	},
 	{
 		name: 'name5',
 		salary: 700,
-		age: 32,
+		dismissed: false,
 	},
 ];
 let total = 0;
 for (let elem of employees) {
-    if (elem.age >= 30) {
+    if (elem.dismissed === false) {
         total += elem.salary;
     }
 }
