@@ -1,9 +1,6 @@
 let arr = [21, 9, 33, -8, 5, -18, 1, -1];
-let flag = false;
+total = 0;
 for (let elem of arr) {
-    if (elem == 5) {
-        flag = true;
-        break
-    }
+    total += elem;
 }
-console.log(flag);
+console.log(total);
