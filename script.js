@@ -1,4 +1,8 @@
-let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-for (i = 1; i < arr.length - 1; i++) {
-    console.log(arr[i-1] + arr[i] + arr[i+1]);
+let one = 0;
+let two = 1;
+for (i = 1; i <= 10; i++) {
+    let current = one + two;
+    one = two;
+    two = current;
+    console.log(current);
 }
