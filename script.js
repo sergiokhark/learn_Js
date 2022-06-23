@@ -19,10 +19,14 @@ let data = [
 		1: 'data31',
 		2: 'data32',
 	},
+	{
+		1: 'data31',
+		2: 'data32',
+	},
 ];
-for (let i = 0; i < data.length; i++) {
-    for (let key in data[i]) {
-        document.write(data[i][key] + '<br>');
-    }
+for (let elem of data) {
+	for (let key in elem) {
+		document.write(elem[key] + '<br>');
+	}
 }
    
