@@ -1,8 +1,4 @@
-function getRandomInt(min, max) {
-	return Math.floor(Math.random() * (max - min + 1)) + min;
-}
-let arr = [];
-for (let i = 0; i < 10; i++) {
-	arr.push(getRandomInt(1, 100));
-}
-console.log(arr);
+let str = 'я учу javascript!';
+console.log(str.substr(2, 3), str.substr(6, 10));
+console.log(str.substring(2, 5), str.substring(6, 16));
+console.log(str.slice(2, 5), str.slice(6, -1));
