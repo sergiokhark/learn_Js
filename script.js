@@ -1,5 +1,6 @@
-let res = Math.sqrt(379);
+let res = Math.sqrt(587);
+let obj = {};
+obj['ceil'] = Math.ceil(res);
+obj['floor'] = Math.floor(res);
 console.log(res);
-console.log(Math.round(res));
-console.log(res.toFixed(1)); // String ?
-console.log(res.toFixed(2));
+console.log(obj);
