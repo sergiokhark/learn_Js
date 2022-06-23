@@ -1,6 +1,4 @@
-let res = Math.sqrt(587);
-let obj = {};
-obj['ceil'] = Math.ceil(res);
-obj['floor'] = Math.floor(res);
-console.log(res);
-console.log(obj);
+function getRandomInt(min, max) {
+	return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+console.log(getRandomInt(1, 100));
