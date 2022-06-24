@@ -1,10 +1,10 @@
-function getDigitsSum(num) {
-    let total = 0;
-    num = String(num);
-    for (let i = 0; i < num.length; i++) {
-        total += Number(num[i]);
+function getDivisors(num) {
+    let arr = [];
+    for (let i = 1; i <= num; i++) {
+        if (num % i == 0) {
+            arr.push(i);
+        }
     }
-    return total;  
+    return arr;
 }
-console.log(getDigitsSum(12345));
-console.log(getDigitsSum(123450589));
+console.log(getDivisors(24));
