@@ -1,12 +1,8 @@
-let i = 1;
-function func(num) {
-    while (true) {
-        num /= 2;
-        if (num < 10) {
-            return i;
-        }
-        i++;
-    }
+function func(num1, num2) {
+	if (num1 > 0 && num2 > 0) {
+		return(num1 * num2);
+	} else {
+		return(num1 - num2);
+	}	
 }
-
-console.log(func(46));
+alert(func(3, 4));
