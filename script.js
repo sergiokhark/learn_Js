@@ -1,10 +1,10 @@
-function isEvenNum(num) {
-    num = String(num);
-    for (let i = 0; i < num.length; i++) {
-        if (Number(num[i]) % 2 == 0) {
-            return false;
+function isArray(arr) {
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] == arr[i + 1]) {
+            return true;
         }
-    } return true;
+    } return false;
 }
-console.log(isEvenNum(248866466));
-console.log(isEvenNum(777333113355));
+console.log(isArray([2, 6, 8, 8, 6, 0, 1]));
+console.log(isArray([2, 6, 8, 7, 6, 0, 1]));
+console.log(isArray([2, 6, 'a', 'b', 'b', 0, 1]));
