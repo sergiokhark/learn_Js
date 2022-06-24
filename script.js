@@ -1,25 +1,29 @@
-let arr = [12, 19, 28, 13, 14, 345];
-let result = [];
+function isFreindly(num1, num2) {
+	let sum1 = getSum(getOwnDivisors(num1));
+	let sum2 = getSum(getOwnDivisors(num2));
+	
+	if (sum1 == num2 && sum2 == num1) {
+		return true;
+	} else {
+		return false;
+	}
+}
 
-// Функция создает массив из числа
-function getArrNum(num) {
-	return String(num).split('');
+function getOwnDivisors(num) {
+	let arr = [];
+	for (let i = 1; i < num; i++) {
+		if (num % i == 0) {
+			arr.push(i);
+		}
+	}
+	return arr;
 }
-// Функция подсчета суммы цифр числа
+
 function getSum(arr) {
-	let total = 0;
+	let sum = 0;
 	for (let elem of arr) {
-		total += Number(elem);
+		sum += elem;
 	}
-	return total;
+	return sum;
 }
-// Функция проверки лежит ли сумма цифр в диапазоне [1, 9]
-function isSum(num) {
-	return getSum(getArrNum(num)) >= 1 && getSum(getArrNum(num)) <= 9;
-}
-for (let element of arr) {
-	if (isSum(element)) {
-		result.push(element);
-	}
-}
-console.log(result);
+console.log(isFreindly(220, 284));
