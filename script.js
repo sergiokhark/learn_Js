@@ -1,5 +1,9 @@
-function cub(num) {
-    console.log(num ** 3);
+function checkNum(num) {
+    if (num > 0) {
+        console.log('+++');
+    } else {
+        console.log('---');
+    }
 }
 
-cub(2);
+checkNum(-25);
