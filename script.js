@@ -1,8 +1,12 @@
-function func(num1, num2) {
-	if (num1 > 0 && num2 > 0) {
-		return(num1 * num2);
-	} else {
-		return(num1 - num2);
-	}	
+function getTotal(arr) {
+    let total = 0;
+    for (let elem of arr) {
+        total += elem ** 2;
+    }
+    return total;
 }
-alert(func(3, 4));
+
+let arr1 = [1, 2, 3];
+let arr2 = [3, 5, 1];
+
+console.log(getTotal(arr1), getTotal(arr2));
