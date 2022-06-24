@@ -1,5 +1,9 @@
-function func(num) {
-    return Math.sqrt(num);
+function sqrt(num) {
+	return Math.sqrt(num);
 }
-let total = func(3) + func(4);
-console.log(total);
+
+function round(num) {
+	return num.toFixed(3);
+}
+let res = round(sqrt(2));
+console.log(res);
