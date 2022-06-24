@@ -1,15 +1,17 @@
-function getDigitSum(num) {
-    let sum = 0;
-    let digits = String(num).split('');
-    for (let digit of digits) {
-        sum += Number(digit);
-    }
-    return sum;
+let nums = [12, 24, 35, 14];
+
+for (let num of nums) {
+	console.log(num + ': ' + getDivisors(num).join(', '));
 }
-let num1 = 234;
-let num2 = 531;
-if (getDigitSum(num1) == getDigitSum(num2)) {
-    alert('суммы цифр совпадают');
-} else {
-    alert('суммы цифр не совпадают');
+
+function getDivisors(num) {
+	let result = [];
+	
+	for (let i = 2; i < num; i++) {
+		if (num % i == 0) {
+			result.push(i);
+		}
+	}
+	
+	return result;
 }
