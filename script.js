@@ -1,5 +1,5 @@
-function cubNum(num) {
-    return num ** 3;
+function func(num) {
+    return Math.sqrt(num);
 }
-result = cubNum(3);
-console.log(result);
+let total = func(3) + func(4);
+console.log(total);
