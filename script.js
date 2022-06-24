@@ -1,24 +1,25 @@
-console.log( getAvg(getDivisors(24)) );
+let arr = [12, 19, 28, 13, 14, 345];
+let result = [];
 
-// Нахождение среднего арифметического:
-function getAvg(arr) {
-	let sum = 0;
-	
+// Функция создает массив из числа
+function getArrNum(num) {
+	return String(num).split('');
+}
+// Функция подсчета суммы цифр числа
+function getSum(arr) {
+	let total = 0;
 	for (let elem of arr) {
-		sum += elem;
+		total += Number(elem);
 	}
-	
-	return sum / arr.length;
+	return total;
 }
-
-// Нахождение массива делителей числа:
-function getDivisors(num) {
-	let result = [];
-	
-	for (let i = 2; i < num; i++) {
-		if (num % i == 0) {
-			result.push(i);
-		}
-    }
-    return result;
+// Функция проверки лежит ли сумма цифр в диапазоне [1, 9]
+function isSum(num) {
+	return getSum(getArrNum(num)) >= 1 && getSum(getArrNum(num)) <= 9;
 }
+for (let element of arr) {
+	if (isSum(element)) {
+		result.push(element);
+	}
+}
+console.log(result);
