@@ -1,10 +1,15 @@
-function numReverse(num) {
-    num = String(num).split('').reverse().join('');
-    return num;
+function getDigitSum(num) {
+    let sum = 0;
+    let digits = String(num).split('');
+    for (let digit of digits) {
+        sum += Number(digit);
+    }
+    return sum;
 }
-let nums = [123, 456, 789, 489, 578, 163, 12];
-let arr = [];
-for (let elem of nums) {
-    arr.push(Number(numReverse(elem)));
-} 
-console.log(arr);
+let num1 = 234;
+let num2 = 531;
+if (getDigitSum(num1) == getDigitSum(num2)) {
+    alert('суммы цифр совпадают');
+} else {
+    alert('суммы цифр не совпадают');
+}
