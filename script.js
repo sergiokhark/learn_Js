@@ -1,10 +1,14 @@
-function isArray(arr) {
-    for (let i = 0; i < arr.length; i++) {
-        if (arr[i] == arr[i + 1]) {
-            return true;
-        }
-    } return false;
+function isPrime(num) {
+	for (let i = 2; i < num; i++) {
+		if (num % i == 0) {
+			return false;
+		}
+	}
+	
+	return true;
 }
-console.log(isArray([2, 6, 8, 8, 6, 0, 1]));
-console.log(isArray([2, 6, 8, 7, 6, 0, 1]));
-console.log(isArray([2, 6, 'a', 'b', 'b', 0, 1]));
+for (let j = 1; j <= 100; j++) {
+    if (isPrime(j)) {
+        console.log(j);
+    }
+}
