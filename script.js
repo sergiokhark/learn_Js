@@ -1,9 +1,10 @@
-function isEven(arr) {
-    for (let elem of arr) {
-        if (elem % 2 != 0) {
+function isEvenNum(num) {
+    num = String(num);
+    for (let i = 0; i < num.length; i++) {
+        if (Number(num[i]) % 2 == 0) {
             return false;
         }
     } return true;
 }
-console.log(isEven([2, 4, 6, 8, 12]));
-console.log(isEven([1, 4, 7, 11,]));
+console.log(isEvenNum(248866466));
+console.log(isEvenNum(777333113355));
