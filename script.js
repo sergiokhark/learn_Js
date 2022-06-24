@@ -1,14 +1,15 @@
-function isPrime(num) {
-	for (let i = 2; i < num; i++) {
-		if (num % i == 0) {
-			return false;
-		}
+function getDigitsSum(num) {
+	let sum = 0;
+	let digits = String(num).split('');
+	
+	for (let digit of digits) {
+		sum += Number(digit);
 	}
 	
-	return true;
+	return sum;
 }
-for (let j = 1; j <= 100; j++) {
-    if (isPrime(j)) {
-        console.log(j);
+for (let i = 1; i <= 2030; i++) {
+    if (getDigitsSum(i) == 13) {
+        console.log(i);
     }
 }
