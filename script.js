@@ -1,10 +1,5 @@
-function getDivisors(num) {
-    let arr = [];
-    for (let i = 1; i <= num; i++) {
-        if (num % i == 0) {
-            arr.push(i);
-        }
-    }
-    return arr;
+function reverseStr(str) {
+    str = str.split('').reverse().join('');
+    return str;
 }
-console.log(getDivisors(24));
+console.log(reverseStr('переворот'));
