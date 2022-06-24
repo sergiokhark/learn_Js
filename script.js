@@ -1,9 +1,17 @@
-let nums = [12, 24, 35, 14];
+console.log( getAvg(getDivisors(24)) );
 
-for (let num of nums) {
-	console.log(num + ': ' + getDivisors(num).join(', '));
+// Нахождение среднего арифметического:
+function getAvg(arr) {
+	let sum = 0;
+	
+	for (let elem of arr) {
+		sum += elem;
+	}
+	
+	return sum / arr.length;
 }
 
+// Нахождение массива делителей числа:
 function getDivisors(num) {
 	let result = [];
 	
@@ -11,7 +19,6 @@ function getDivisors(num) {
 		if (num % i == 0) {
 			result.push(i);
 		}
-	}
-	
-	return result;
+    }
+    return result;
 }
