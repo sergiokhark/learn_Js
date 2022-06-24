@@ -1,8 +1,9 @@
-function getArr(num1, num2) {
-    let arr = [];
-    for (let i = num1; i <= num2; i++) {
-        arr.push(i);
-    }
-    return arr;
+function isEven(arr) {
+    for (let elem of arr) {
+        if (elem % 2 != 0) {
+            return false;
+        }
+    } return true;
 }
-console.log(getArr(10, 18));
+console.log(isEven([2, 4, 6, 8, 12]));
+console.log(isEven([1, 4, 7, 11,]));
