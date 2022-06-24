@@ -1,9 +1,6 @@
-function checkNum(num) {
-    if (num > 0) {
-        console.log('+++');
-    } else {
-        console.log('---');
-    }
+function totalNum(num1, num2, num3) {
+    console.log(num1 + num2 + num3);
 }
 
-checkNum(-25);
+totalNum(10, 5, 15);
+totalNum(-5, 5, 4);
