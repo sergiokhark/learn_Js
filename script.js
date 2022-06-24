@@ -1,12 +1,10 @@
-function getTotal(arr) {
+function getDigitsSum(num) {
     let total = 0;
-    for (let elem of arr) {
-        total += elem ** 2;
+    num = String(num);
+    for (let i = 0; i < num.length; i++) {
+        total += Number(num[i]);
     }
-    return total;
+    return total;  
 }
-
-let arr1 = [1, 2, 3];
-let arr2 = [3, 5, 1];
-
-console.log(getTotal(arr1), getTotal(arr2));
+console.log(getDigitsSum(12345));
+console.log(getDigitsSum(123450589));
