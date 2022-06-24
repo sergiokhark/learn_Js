@@ -1,8 +1,5 @@
-function totalNum(num1, num2, num3) {
-    console.log(num1 + num2 + num3);
+function cubNum(num) {
+    return num ** 3;
 }
-let param1 = 10;
-let param2 = 2;
-let param3 = 3;
-
-totalNum(param1, param2, param3);
+result = cubNum(3);
+console.log(result);
