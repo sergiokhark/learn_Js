@@ -1,15 +1,10 @@
-function getDigitsSum(num) {
-	let sum = 0;
-	let digits = String(num).split('');
-	
-	for (let digit of digits) {
-		sum += Number(digit);
-	}
-	
-	return sum;
+function numReverse(num) {
+    num = String(num).split('').reverse().join('');
+    return num;
 }
-for (let i = 1; i <= 2030; i++) {
-    if (getDigitsSum(i) == 13) {
-        console.log(i);
-    }
-}
+let nums = [123, 456, 789, 489, 578, 163, 12];
+let arr = [];
+for (let elem of nums) {
+    arr.push(Number(numReverse(elem)));
+} 
+console.log(arr);
