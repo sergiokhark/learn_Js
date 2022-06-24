@@ -1,6 +1,5 @@
-function funcName() {
-    for (let i = 1; i <= 100; i++) {
-        console.log(i);
-    }
+function cub(num) {
+    console.log(num ** 3);
 }
-funcName();
+
+cub(2);
