@@ -26,4 +26,16 @@ function getSum(arr) {
 	}
 	return sum;
 }
-console.log(isFreindly(220, 284));
+
+function getFreindly() {
+	let arr = [];
+	for (let i = 1; i < 3000; i++) {
+		for (let j = i + 1; j < 3000; j++) {
+			if (isFreindly(i, j)) {
+				arr.push([i, j]);
+			}
+		}
+	}
+	return arr;
+}
+console.log(getFreindly());
