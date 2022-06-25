@@ -1,29 +1,13 @@
-function getDivisors(num) {
-    let arr = [];
-    for (let i = 2; i <= num; i++) {
-        if (num % i == 0) {
-            arr.push(i);
-        }
-    }
-    return arr;
+function inArray(elem, arr) {
+    return arr.indexOf(elem) != -1
 }
-console.log(getDivisors(12));
-
-function getSimpleDivisors(num) {
+function getInt(arr1, arr2) {
     let result = [];
-    let arrDiv = getDivisors(num);
-    for (let i = 0; i < arrDiv.length; i++) {
-        let flag = true;
-        for (let j = 2; j < arrDiv[i]; j++) {
-            if (arrDiv[i] % j == 0) {
-                flag = false;
-                break;
-            }
-        }
-        if (flag) {
-            result.push(arrDiv[i]);
+    for (let elem of arr1) {
+        if (inArray(elem, arr2)) {
+            result.push(elem);
         }
     }
     return result;
 }
-console.log(getSimpleDivisors(12));
+console.log(getInt([1, 8, 9, 11, 12, 18, 44, 5], [13, 15, 11, 5, 1, 88, 18]));
