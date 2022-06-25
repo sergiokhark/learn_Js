@@ -1,40 +1,29 @@
-function isFreindly(num1, num2) {
-	let sum1 = getSum(getOwnDivisors(num1));
-	let sum2 = getSum(getOwnDivisors(num2));
-	
-	if (sum1 == num2 && sum2 == num1) {
-		return true;
-	} else {
-		return false;
-	}
-}
-
-function getOwnDivisors(num) {
-	let arr = [];
-	for (let i = 1; i < num; i++) {
-		if (num % i == 0) {
-			arr.push(i);
-		}
-	}
-	return arr;
-}
-
-function getSum(arr) {
-	let sum = 0;
-	for (let elem of arr) {
-		sum += elem;
-	}
-	return sum;
-}
-
-function getFreindly() {
-	let arr = [];
-    for (let i = 1; i < 9000; i++) {
-        let j = getSum(getOwnDivisors(i));
-        if (isFreindly(i, j)) {
-            arr.push([i, j]); 
+function getDivisors(num) {
+    let arr = [];
+    for (let i = 2; i <= num; i++) {
+        if (num % i == 0) {
+            arr.push(i);
         }
     }
     return arr;
 }
-console.log(getFreindly());
+console.log(getDivisors(12));
+
+function getSimpleDivisors(num) {
+    let result = [];
+    let arrDiv = getDivisors(num);
+    for (let i = 0; i < arrDiv.length; i++) {
+        let flag = true;
+        for (let j = 2; j < arrDiv[i]; j++) {
+            if (arrDiv[i] % j == 0) {
+                flag = false;
+                break;
+            }
+        }
+        if (flag) {
+            result.push(arrDiv[i]);
+        }
+    }
+    return result;
+}
+console.log(getSimpleDivisors(12));
