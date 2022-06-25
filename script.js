@@ -28,4 +28,12 @@ function getGreatestCommonDivisor(num1, num2) {
     return NOD;
 }
 
-console.log(getGreatestCommonDivisor(180, 150));
+function primeNum(num1, num2) {
+    if (getGreatestCommonDivisor(num1, num2) == 1) {
+        return true; 
+    } else {
+        return false;
+    }  
+}
+
+console.log(primeNum(11, 19));
