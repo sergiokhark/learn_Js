@@ -1,9 +1,13 @@
 function getRandomInt(min, max) {
 	return Math.floor(Math.random() * (max - min + 1)) + min;
 }
-function random(arr) {
-    return arr[getRandomInt(0, arr.length - 1)];
+function shuffle(arr) {
+    let result = [];
+    while (arr.length > 0) {
+        let cutElem = arr.splice(getRandomInt(0, arr.length - 1), 1);
+        result.push(cutElem[0]);
+    }  
+    return result;
 }
 
-let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-console.log(random(arr) + random(arr) + random(arr));
+console.log(shuffle([1, 2, 3, 4, 5, 6, 7, 8, 9]))
