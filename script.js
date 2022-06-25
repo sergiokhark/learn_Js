@@ -11,17 +11,8 @@ function shuffle(arr) {
     return result;
 }
 
-function range(start, stop) {
-    let result = [];
-    for (let i = start; i <= stop; i++) {
-        result.push(i);
-    }
-    return result;
+function randoms(arr, length) {
+    let shuffArr = shuffle(arr);
+    return shuffArr.slice(0, length);
 }
-
-function rangeRand(start, stop) {
-    
-    return shuffle(range(start, stop));
-}
-
-console.log(rangeRand(1, 15));
+console.log(randoms([1, 2, 3, 4, 5], 3));
