@@ -9,4 +9,7 @@ let arr = [
         return 3;
     }
 ]
-alert(arr[0]() + arr[1]() + arr[2]());
+
+for (let elem of arr) {
+    alert(elem());
+}
