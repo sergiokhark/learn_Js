@@ -1,15 +1,9 @@
-function func1() {
-    return 1;
-}
-function func2() {
-    return 2;
-}
-function func3() {
-    return 3;
+function test(func) {
+	alert(func(3));
 }
 
-function test(func1, func2, func3) {
-    alert(func1() + func2() + func3());
+function func(num) {
+    return num ** 3;
 }
 
-test(func1, func2, func3);
+test(func);
