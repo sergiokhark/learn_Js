@@ -9,5 +9,9 @@ let obj = {
         return 3;
     }
 }
-console.log(obj.func1() + obj.func2() + obj.func3());
-console.log(obj['func1']() + obj['func2']() + obj['func3']());
+
+for (let key in obj) {
+    console.log(obj[key]());
+}
+
+
