@@ -1,11 +1,10 @@
-function test(num, func1, func2) {
-	return func1(num) + func2(num);
+function test(arr, func) {
+    for (let i = 0; i < arr.length; i++) {
+        arr[i] = func(arr[i]);
+    }
+    return arr;
 }
-alert(test(3,
-    function (num) {
-        return num * num;
-    },
-    function (num) {
-        return num ** 3;
-    }));
-    
+
+console.log(test([1, 4, 5], function (num) {
+    return num * num;
+}));
