@@ -1,28 +1,5 @@
-let obj = {
-    sum: function getSumArr(arr) {
-        let sum = 0;
-        for (let elem of arr) {
-            sum += elem;
-        }
-        return sum;
-    },
-    sumSquare: function getSumSquare(arr) {
-        let sum = 0;
-        for (let elem of arr) {
-            sum += elem ** 2;
-        }
-        return sum;
-    },
-    sumCub: function getSumCub(arr) {
-        let sum = 0;
-        for (let elem of arr) {
-            sum += elem ** 3;
-        }
-        return sum;
-    }
+function test(func1, func2, func3) {
+    alert(func1() + func2() + func3());
 }
 
-let array = [1, 2, 3];
-console.log(obj['sum'](array));
-console.log(obj['sumSquare'](array));
-console.log(obj['sumCub'](array));
+test(function func1() { return 1; }, function func2() { return 2; }, function func3() { return 3; });
