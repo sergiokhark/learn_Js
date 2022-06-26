@@ -1,10 +1,12 @@
-function test(arr, func) {
-    for (let i = 0; i < arr.length; i++) {
-        arr[i] = func(arr[i]);
+function func(num1, num2) {
+    function square(num) {
+        return num ** 2;
     }
-    return arr;
+
+    function cube(num) {
+        return num ** 3;
+    }  
+    return square(num1) + cube(num2);
 }
 
-console.log(test([1, 4, 5], function (num) {
-    return num * num;
-}));
+console.log(func(2, 3));
