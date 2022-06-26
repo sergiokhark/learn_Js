@@ -1,17 +1,28 @@
 let obj = {
-    func1: function() {
-        return 1;
+    sum: function getSumArr(arr) {
+        let sum = 0;
+        for (let elem of arr) {
+            sum += elem;
+        }
+        return sum;
     },
-    func2: function () {
-        return 2;
+    sumSquare: function getSumSquare(arr) {
+        let sum = 0;
+        for (let elem of arr) {
+            sum += elem ** 2;
+        }
+        return sum;
     },
-    func3: function () {
-        return 3;
+    sumCub: function getSumCub(arr) {
+        let sum = 0;
+        for (let elem of arr) {
+            sum += elem ** 3;
+        }
+        return sum;
     }
 }
 
-for (let key in obj) {
-    console.log(obj[key]());
-}
-
-
+let array = [1, 2, 3];
+console.log(obj['sum'](array));
+console.log(obj['sumSquare'](array));
+console.log(obj['sumCub'](array));
