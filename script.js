@@ -1,9 +1,11 @@
-function test(func) {
-	alert(func(2, 3));
+function test(num, func1, func2) {
+	return func1(num) + func2(num);
 }
-
-func1 = function func(num1, num2) {
-    return num1 + num2;
-}
-
-test(func1);
+alert(test(3,
+    function (num) {
+        return num * num;
+    },
+    function (num) {
+        return num ** 3;
+    }));
+    
