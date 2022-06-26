@@ -1,16 +1,15 @@
-let f1 = function () {
-    return 5;
-};
-let f2 = function () {
-    return 10;
-};
-let f3 = function () {
-    return 15;
+function func1() {
+    return 1;
+}
+function func2() {
+    return 2;
+}
+function func3() {
+    return 3;
 }
 
 function test(func1, func2, func3) {
-    let result = func1() + func2() + func3();
-    return result;
+    alert(func1() + func2() + func3());
 }
 
-console.log(test(f1, f2, f3));
+test(func1, func2, func3);
