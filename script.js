@@ -1,12 +1,12 @@
-function func(num1, num2) {
-    function square(num) {
-        return num ** 2;
+function func1() {
+    return function () {
+        return 1;
     }
-
-    function cube(num) {
-        return num ** 3;
-    }  
-    return square(num1) + cube(num2);
 }
 
-console.log(func(2, 3));
+function func2() {
+    return function () {
+        return 2;
+    }
+}
+alert(func1()() + func2()());
