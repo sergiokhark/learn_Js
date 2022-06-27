@@ -1,27 +1,7 @@
-function test() {
-    let num = 10;
+(function() {
     return function () {
-        if (num >= 0) {
-            alert(num);
-            num--;
-        } else {
-            alert('Отсчет окончен')
+        return function () {
+            alert('!');
         }
-        
     }
-}
-
-let func = test();
-func();
-func();
-func();
-func();
-func();
-func();
-func();
-func();
-func();
-func();
-func();
-func();
-func();
+})()()();
