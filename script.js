@@ -1,14 +1,19 @@
-function each(arr, callback) {
-	let result = [];
-	for (let i = 0; i < arr.length; i++) {
-		result.push(callback(arr[i], i));
+function filter(arr, callback) {
+	let res = [];
+	for (let elem of arr) {
+		if (callback(elem)) {
+			res.push(elem);
+		}
 	}
-	return result;
+	return res;
 }
 
-let res = each([2, 12, 5, 4], function (elem, numElem) {
-	let res = elem * numElem;
-	return res;
+let result = filter([1, 2, 3, 4, 5, 6], function (elem) {
+	if (elem % 2 == 0) {
+		return true;
+	} else {
+		return false;
+	}
 });
 
-console.log(res);
+console.log(result);
