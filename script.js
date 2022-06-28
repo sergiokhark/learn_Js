@@ -8,8 +8,8 @@ function filter(arr, callback) {
 	return res;
 }
 
-let result = filter([-1, 2, 3, 4, 5, -6], function (elem) {
-	if (elem > 0) {
+let result = filter(['abcde', 'ab', 'a', 'abcdef', 'cdb'], function (elem) {
+	if (elem.length <= 3) {
 		return true;
 	} else {
 		return false;
