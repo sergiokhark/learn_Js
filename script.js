@@ -1,5 +1,3 @@
-let arr = [2, 6, 16, 8, 22, 1, 39];
-let arr1 = arr.filter(function (elem, index) {
-	return elem * index < 30;
-});
-console.log(arr1);
+let arr1 = [1, 2, [3, 4], 5, [6, 7]];
+let arr2 = arr1.filter(elem => !Array.isArray(elem));
+console.log(arr2);
