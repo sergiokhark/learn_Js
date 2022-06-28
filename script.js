@@ -1,6 +1,3 @@
-let arr = [2, 3, 1];
-let sum = 0;
-arr.forEach(function (elem) {
-	sum += elem ** 2;
-});
-console.log(sum);
+let arr = ['abcdefg', 'abc', 'vb', 'abbcbcbc'];
+let arr1 = arr.filter(elem => elem.length > 5);
+console.log(arr1);
