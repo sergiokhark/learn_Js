@@ -1,26 +1,14 @@
-let func = (function () {
-	let num = 1;
-	return function () {
-		alert(num);
-		num++;
-		if (num > 5) {
-			num = 1;
-		}
-	
+function each(arr, callback) {
+	let result = [];
+	for (let elem of arr) {
+		result.push(callback(elem));
 	}
-})();
+	return result;
+}
 
-func();
-func();
-func();
-func();
-func();
-func();
-func();
-func();
-func();
-func();
-func();
-func();
-func();
-func();
+let array = each(['строка1', 'строка2', 'строка3', 'строка4', 'строка5'], function (str) {
+	let str1 = str.split('').reverse().join('');
+	return str1;
+});
+
+console.log(array);
