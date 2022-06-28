@@ -6,9 +6,9 @@ function each(arr, callback) {
 	return result;
 }
 
-let array = each(['строка1', 'строка2', 'строка3', 'строка4', 'строка5'], function (str) {
-	let str1 = str.split('').reverse().join('');
+let res = each(['строка1', 'строка2', 'строка3'], function (str) {
+	let str1 = str[0].toUpperCase() + str.slice(1);
 	return str1;
-});
+})
 
-console.log(array);
+console.log(res);
