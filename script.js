@@ -1,19 +1,17 @@
-function filter(arr, callback) {
-	let res = [];
-	for (let elem of arr) {
-		if (callback(elem)) {
-			res.push(elem);
+function every(arr, callback) {
+	for (let elem of arr) {	
+		if (!callback(elem)) {
+			return false;
 		}
 	}
-	return res;
+	return true;
 }
 
-let result = filter(['abcde', 'ab', 'a', 'abcdef', 'cdb'], function (elem) {
-	if (elem.length <= 3) {
+let result = every([1, 2, 3, 4, -5], function (elem) {
+	if (elem > 0) {
 		return true;
 	} else {
 		return false;
-	}
+	};
 });
-
 console.log(result);
