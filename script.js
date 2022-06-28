@@ -1,5 +1,4 @@
-let arr = [-1, 2, 3, -4, -5];
-let arr1 = arr.filter(elem => elem < 0);
-console.log(arr1.length);
-
+let arr1 = [1, 2, -5, 12];
+let arr2 = arr1.every(elem => elem > 0);
+console.log(arr2);
 
