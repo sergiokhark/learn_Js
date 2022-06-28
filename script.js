@@ -1,5 +1,5 @@
-let array = ['str1', 'str2', 'str3', 'str4'];
-let arr = array.map(function (elem) {
-	return elem.split('').reverse().join('');
-})
-console.log(arr);
+let arr = ['123', '456', '789'];
+let arr1 = arr.map(function (elem) {
+	return elem.split('');
+});
+console.log(arr1);
