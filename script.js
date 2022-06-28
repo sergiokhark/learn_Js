@@ -1,15 +1,13 @@
-let i = 0;
-
+let arr = [];
 function func(prevPrevNum, prevNum) {
 	let num = prevPrevNum + prevNum;
-	console.log(prevPrevNum);
+	arr.push(prevPrevNum);
 	prevPrevNum = prevNum;
 	prevNum = num;
-	i++;
-	if (i < 10) {
-		func(prevPrevNum, prevNum);
-		
+	if (arr.length < 10) {
+		func(prevPrevNum, prevNum);	
 	}
+	return arr;
 }
 
-func(1, 2);
+console.log(func(1, 2));
