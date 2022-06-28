@@ -1,12 +1,11 @@
-function strFun(arr) {
-	let str = '';
-	for (let elem of arr) {
-		if (typeof elem === 'object') {
-			str += strFun(elem);
+function func(arr) {
+	for (let i = 0; i < arr.length; i++) {
+		if (typeof arr[i] === 'object') {
+			arr[i] = func(arr[i]);
 		} else {
-			str += elem;
+			arr[i] = arr[i] ** 2;
 		}
 	}
-	return str;
+	return arr;
 }
-console.log(strFun(['a', ['b', 'c', 'd'], ['e', 'f', ['g', ['j', 'k']]]]));
+console.log(func([1, [2, 7, 8], [3, 4], [5, [6, 7]]]));
