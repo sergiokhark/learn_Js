@@ -1,26 +1,10 @@
-function getDigitSum(num) {
-	return getSum(getDigit(num));
-}
-
-function getDigit(num) {
-	return String(num).split('');
-} 
-
-function getSum(arr) {
-	let sum = 0;
-	for (let elem of arr) {
-		sum += Number(elem);
-	}
-	return sum;
-}
-
-function reduceNum(num) {
-	let sum = getDigitSum(num);
-	if (sum <= 9) {
-		return sum;
-	} else {
-		return reduceNum(sum);
+function func(obj) {
+	for (let key in obj) {
+		if (typeof obj[key] === 'object') {
+			func(obj[key]);
+		} else {
+			console.log(obj[key]);
+		}
 	}
 }
-
-console.log(reduceNum(2187));
+func({ a: 1, b: { c: 2, d: 3, e: 4 }, f: { g: 5, j: 6, k: { l: 7, m: { n: 8, o: 9 } } } });
