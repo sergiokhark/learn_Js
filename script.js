@@ -1,26 +1,30 @@
-function getInt(...arrs) {
+function getDiff(...arrs) {
     let result = [];
-    let arr0 = arrs.shift();
-    for (let elem of arr0) {
-        if (inArrays(elem, arrs)) {
-            result.push(elem);
+    for (let arr of arrs) {
+        for (let elem of arr) {
+            if (inArrs(elem, arrs)) {
+                result.push(elem);
+            }
         }
     }
     return result;
 }
 
-function inArrays(elem, arrs) {
+function inArrs(elem, arrs) {
     for (let arr of arrs) {
-        if (!inArray(elem, arr)) {
-            return false;
+        if (inArr(elem, arr)) {
+            return true;        // true если элемента нет в массиве
         } else {
-            return true;
+            return false;
         }
     }
 }
 
-function inArray(elem, arr) {
-    return arr.indexOf(elem) !== -1;
+function inArr(elem, arr) {
+    return arr.indexOf(elem) === -1; // true если элемента нет в массиве
 }
 
-console.log(getInt([1, 2, 3], [2, 3, 4], [4, 3, 2]));
+
+console.log(getDiff([2, 3, 11], [2, 3, 7], [4, 3, 21])); // [7, 4, 21]
+console.log(getDiff([18, 3, 11], [2, 3, 7], [4, 3, 21])); // [2, 7, 4, 21]
+console.log(getDiff([18, 3, 11], [7, 3, 7], [4, 3, 21])); // [7, 7, 4, 21]
