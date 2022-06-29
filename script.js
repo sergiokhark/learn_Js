@@ -1,4 +1,10 @@
-let arr1 = [1, 2, 5, 11];
-let res = arr1.some((elem, index) => elem * index > 30);
-console.log(res);
+function func(...arr) {
+    let sum = 0;
+    for (let elem of arr) {
+        sum += elem;
+    }
+    let res = sum / arr.length;
+    return res;
+}
 
+console.log(func(1, 2, 3, 4, 5, 6));
