@@ -1,11 +1,5 @@
-function func1(str) {
-    let arr = str.split('-');
-    return arr;
-}
+let date = new Date();
 
-function func(department, [name, surname], str) {
-    let [year, month, day] = func1(str);
-    console.log(department);
-}
-
-func('отдел разработки', ['Иван', 'Иванов'], '2018-12-31');
+console.log(date.getDate());        // current day
+console.log(date.getMonth() + 1);   // current month
+console.log(date.getFullYear());    // current year
