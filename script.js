@@ -1,6 +1,9 @@
-function isLeap(year) {
-    let date = new Date(year, 2, 0);
-    return date.getDate() === 29;
+function checkDate(year, month, day) {
+    let date = new Date(year, month, day);
+    return date.getFullYear() == year && date.getMonth() == month && date.getDate() == day;
 }
 
-console.log(isLeap(2000));
+
+
+console.log(checkDate(2025, 12, 31)); // выведет true
+console.log(checkDate(2025, 0, 3)); // выведет false
