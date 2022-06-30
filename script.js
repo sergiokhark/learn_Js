@@ -1,7 +1,4 @@
-let months = [
-	'янв', 'фев', 'мар', 'апр', 'май', 'июн',
-	'июл', 'авг', 'сен', 'окт', 'ноя', 'дек'
-];
-let date = new Date();
-let currMonth = date.getMonth();
-console.log(months[currMonth]);
+let date = new Date(1986, 5, 24);
+let day = date.getDay();
+let days = ['вс', 'пн', 'вт', 'ср', 'чт', 'пт', 'cб'];
+console.log(days[day]);
