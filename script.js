@@ -1,14 +1,7 @@
-//'12:59:59 31.12.2014'
+//Дана дата в формате год-месяц-день. Преобразуйте эту дату в формат день.месяц.год.
 
-function zeroNum(num) {
-    if (num >= 0 && num <= 9) {
-        return '0' + num;
-    } else {
-        return num;
-    }
-}
+let date = '2022-06-30';
+let arr = date.split('-');
 
-
-let date = new Date();
-console.log(zeroNum(date.getHours()) + ':' + zeroNum(date.getMinutes()) + ':' + zeroNum(date.getSeconds()) +
-    ' ' + zeroNum(date.getDate()) + '.' + zeroNum(date.getMonth() + 1) + '.' + date.getFullYear());
+console.log(arr[2] + '.' + arr[1] + '.' + arr[0]);
+console.log(date.split('-').reverse().join('.'));
