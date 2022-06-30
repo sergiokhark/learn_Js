@@ -10,8 +10,8 @@ function visYear(year) {
 
 while (!visYear(currentYear)) { // пока год не високосный
     
-    result = currentYear - 1;
-    currentYear--;
+    result = currentYear + 1;
+    currentYear++;
 }
 
 console.log(result);
