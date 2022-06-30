@@ -1,4 +1,10 @@
 let now = new Date();
-let date = new Date(now.getFullYear() + 1, 0, 1);
-let diff = date - now;
-console.log(diff / (1000 * 60 * 60 * 24));
+let currentYear = now.getFullYear();
+let counter = 0;
+for (let month = 0; month <= 11; month++) {
+    let day13 = new Date(currentYear, month, 13);
+    if (day13.getDay() == 5) {
+        counter++;
+    }
+}
+console.log(counter);
