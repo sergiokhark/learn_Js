@@ -1,10 +1,7 @@
+let months = [
+	'янв', 'фев', 'мар', 'апр', 'май', 'июн',
+	'июл', 'авг', 'сен', 'окт', 'ноя', 'дек'
+];
 let date = new Date();
-let currentDay = date.getDay();
-
-if (currentDay == 5 || currentDay == 0) {
-    console.log('Сегодня выходной');
-} else {
-    console.log('Сегодня рабочий день');
-}
-
-console.log('До ближайшего воскресенья осталось: ', 7 - currentDay, ' дней');
+let currMonth = date.getMonth();
+console.log(months[currMonth]);
