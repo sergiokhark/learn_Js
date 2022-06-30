@@ -1,7 +1,10 @@
-//Дана дата в формате год-месяц-день. Преобразуйте эту дату в формат день.месяц.год.
+let date = new Date();
+let currentDay = date.getDay();
 
-let date = '2022-06-30';
-let arr = date.split('-');
+if (currentDay == 5 || currentDay == 0) {
+    console.log('Сегодня выходной');
+} else {
+    console.log('Сегодня рабочий день');
+}
 
-console.log(arr[2] + '.' + arr[1] + '.' + arr[0]);
-console.log(date.split('-').reverse().join('.'));
+console.log('До ближайшего воскресенья осталось: ', 7 - currentDay, ' дней');
