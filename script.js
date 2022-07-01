@@ -3,5 +3,5 @@ let elem2 = document.querySelector('#elem2');
 let button = document.querySelector('#button');
 
 button.addEventListener('click', function () {
-    elem2.innerHTML = elem1.value;
+    elem2.value = elem1.value ** 2;
 });
