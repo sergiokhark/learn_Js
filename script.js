@@ -1,7 +1,11 @@
 let picture = document.querySelector('#picture');
-let button = document.querySelector('#button');
+let button1 = document.querySelector('#button1');
+let button2 = document.querySelector('#button2');
 
-button.addEventListener('click', function () {
-    picture.width = picture.width * 2;
-})
+button1.addEventListener('click', function () {
+    picture.src = 'img/pic1.jpg';
+});
+button2.addEventListener('click', function () {
+    picture.src = 'img/pic2.jpg';
+});
 
