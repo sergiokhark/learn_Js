@@ -3,5 +3,8 @@ let elem2 = document.querySelector('#elem2');
 let button = document.querySelector('#button');
 
 button.addEventListener('click', function () {
-    elem2.value = elem1.value ** 2;
+    let box = elem1.value;
+    elem1.value = elem2.value;
+    elem2.value = box;
+
 });
