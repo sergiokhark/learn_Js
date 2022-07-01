@@ -1,11 +1,15 @@
 let elem1 = document.querySelector('#elem1');
-let button1 = document.querySelector('#button1');
-let button2 = document.querySelector('#button2');
+let elem2 = document.querySelector('#elem2');
+let elem3 = document.querySelector('#elem3');
 
-button1.addEventListener('click', function () {
-    elem1.innerHTML = 'Привет';
+elem1.addEventListener('click', function () {
+    elem1.innerHTML = 1;
 });
 
-button2.addEventListener('click', function () {
-    elem1.innerHTML = 'Пока';
+elem2.addEventListener('click', function () {
+    elem2.innerHTML = 2;
+});
+
+elem3.addEventListener('click', function () {
+    elem3.innerHTML = 3;
 });
