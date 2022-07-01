@@ -1,6 +1,8 @@
-let link = document.querySelector('#elem1');
+let picture = document.querySelector('#picture');
 let button = document.querySelector('#button');
+let elem = document.querySelector('#elem');
 
 button.addEventListener('click', function () {
-    link.innerHTML = link.innerHTML + '(' + link.href + ')';
+    elem.innerHTML = picture.src;
 })
+
