@@ -1,7 +1,7 @@
 let now = new Date();
-let date = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 12);
+let date = new Date(now.getFullYear(), now.getMonth(), 15);
 if (date > now) {
-    console.log('Полдня еще не было');
+    console.log('Половина месяца еще не прошла');
 } else {
-    console.log('Полдень уже был');
+    console.log('Половина месяца уже прошла');
 }
