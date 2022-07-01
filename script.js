@@ -1,6 +1,7 @@
-let elem1 = document.querySelector('#elem1');
+let link = document.querySelector('#elem1');
 let button = document.querySelector('#button');
-button.addEventListener('click', function () {
-    elem1.innerHTML = '<b>' + elem1.innerHTML + '</b>';
-})
+let elem = document.querySelector('#elem2');
 
+button.addEventListener('click', function () {
+    elem.innerHTML = link.href;
+})
