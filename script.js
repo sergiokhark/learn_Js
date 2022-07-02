@@ -1,8 +1,9 @@
-let link = document.querySelector('a')
-link.addEventListener('click', func)
+let button = document.querySelector('#button')
+button.addEventListener('click', func)
 
 function func() {
-    this.innerHTML = this.innerHTML + this.href
-    link.removeEventListener('click', func)
+    this.value = Number(this.value) + 1
+    if (this.value == 10) {
+        button.removeEventListener('click', func)
+    }
 }
-
