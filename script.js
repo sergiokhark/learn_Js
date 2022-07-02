@@ -1,8 +1,13 @@
-let elems = document.querySelectorAll('.elem')
+let elems = document.querySelectorAll('#elem')
+let elem1 = document.querySelector('.elem1')
 let button = document.querySelector('#button')
+
 button.addEventListener('click', func)
+
 function func() {
-    for (let i = 0; i < elems.length; i++) {
-        elems[i].innerHTML = elems[i].innerHTML + (i + 1)
+    let sum = 0
+    for (let elem of elems) {
+        sum += Number(elem.value)
     }
+    elem1.innerHTML = sum
 }
