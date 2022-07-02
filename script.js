@@ -1,9 +1,10 @@
-let button = document.querySelector('#button')
-button.addEventListener('click', func)
+let elems = document.querySelectorAll('p')
+
+for (let elem of elems) {
+    elem.addEventListener('click', func)
+}
 
 function func() {
-    this.value = Number(this.value) + 1
-    if (this.value == 10) {
-        button.removeEventListener('click', func)
-    }
+    this.innerHTML = this.innerHTML + '!'
+    this.removeEventListener('click', func)
 }
