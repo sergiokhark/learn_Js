@@ -1,8 +1,8 @@
-function func() {
-	this.value = Number(this.value) + 1;
+let elems = document.querySelectorAll('p')
+for (let elem of elems) {
+    elem.addEventListener('click', func)
 }
 
-let elems = document.querySelectorAll('#elem')
-for (let elem of elems) {
-    elem.addEventListener('blur', func)
+function func() {
+    this.innerHTML = this.innerHTML ** 2;
 }
