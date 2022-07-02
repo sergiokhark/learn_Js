@@ -1,11 +1,8 @@
-let elem1 = document.querySelector('#elem1')
-let elem2 = document.querySelector('#elem2')
-let elem3 = document.querySelector('#elem3')
-
-elem1.addEventListener('blur', func)
-elem2.addEventListener('blur', func)
-elem3.addEventListener('blur', func)
-
+let elems = document.querySelectorAll('.elem')
+let button = document.querySelector('#button')
+button.addEventListener('click', func)
 function func() {
-    this.value = this.value ** 2
+    for (let i = 0; i < elems.length; i++) {
+        elems[i].innerHTML = elems[i].innerHTML + (i + 1)
+    }
 }
