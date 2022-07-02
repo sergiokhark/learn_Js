@@ -1,8 +1,8 @@
-let elems = document.querySelectorAll('p')
-for (let elem of elems) {
-    elem.addEventListener('click', func)
-}
+let link = document.querySelector('a')
+link.addEventListener('click', func)
 
 function func() {
-    this.innerHTML = this.innerHTML ** 2;
+    this.innerHTML = this.innerHTML + this.href
+    link.removeEventListener('click', func)
 }
+
