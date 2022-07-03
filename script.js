@@ -1,14 +1,11 @@
 let elem = document.querySelector('#elem')
+let elems = document.querySelectorAll('#elem1')
 
 elem.addEventListener('blur', func)
 
 function func() {
-    let arr = elem.value.split(',')
-    let sum = 0
-    for (let elem of arr) {
-        sum += Number(elem)
+    let fioArr = elem.value.split(' ')
+    for (let i = 0; i < fioArr.length; i++) {
+        elems[i].value = fioArr[i]
     }
-    let res = sum / arr.length
-    
-    console.log('Среднее арифм =', res)
 }
