@@ -1,9 +1,14 @@
 let elem = document.querySelector('#elem')
+let button = document.querySelector('#button')
 
-elem.addEventListener('blur', func)
+button.addEventListener('click', func)
 
 function func() {
-    let arr = elem.value.split('.')
-    elem.value = arr.reverse().join('-')
+    if (elem.value.split('').reverse().join('') == elem.value) {
+        alert('Читается одинаково')
+    } else {
+        alert('Читается не одинаково')
+    }
+    
 }
     
