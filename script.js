@@ -1,6 +1,9 @@
-let elems = document.querySelectorAll('div')
-for (let elem of elems) {
-    elem.addEventListener('click', function () {
-        elem.innerHTML = elem.innerHTML + elem.dataset.num
-    })
-}
+let button = document.querySelector('#elem')
+
+button.addEventListener('click', function () {
+    button.dataset.user = Number(button.dataset.user) + 1  
+})
+
+button.addEventListener('dblclick', function () {
+    alert(button.dataset.user) 
+})
