@@ -1,14 +1,12 @@
-let elem = document.querySelector('#elem')
+let elems = document.querySelectorAll('p')
+let button = document.querySelector('#button')
 
-elem.addEventListener('blur', func)
+button.addEventListener('click', func)
 
 function func() {
-    let digits = elem.value.split('')
-    for (let elem of digits) {
-        if (elem == '3') {
-            alert('Число содержит 3')
-            break
-        } 
+    for (let i = 0; i < elems.length; i++) {
+        elems[i].innerHTML += i + 1
+        
     }
 }
     
