@@ -1,3 +1,11 @@
-#parent input {
+.colored {
     color: red;
+}
+
+.decorated {
+    text-decoration:line-through;
+}
+
+.bolded {
+    font-weight: bold;
 }
