@@ -5,7 +5,9 @@ button.addEventListener('click', func)
 
 function func() {
     for (let elem of elems) {
-        elem.innerHTML += '(' + elem.href + ')'
+        if (elem.href.startsWith('http://')) {
+            elem.innerHTML += 'GOOD'
+        }
     }
 }
     
