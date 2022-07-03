@@ -1,11 +1,14 @@
 let elem = document.querySelector('#elem')
-let elems = document.querySelectorAll('#elem1')
 
 elem.addEventListener('blur', func)
 
 function func() {
-    let fioArr = elem.value.split(' ')
-    for (let i = 0; i < fioArr.length; i++) {
-        elems[i].value = fioArr[i]
+    let fio = elem.value.split(' ')
+    let arr = []
+    for (let i = 0; i < fio.length; i++) {
+        arr.push(fio[i][0].toUpperCase() + fio[i].slice(1))
     }
+    elem.value = arr.join(' ')
+
 }
+    
