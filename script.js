@@ -4,14 +4,14 @@ let button2 = document.querySelector('#button2')
 let button3 = document.querySelector('#button3')
 
 button1.addEventListener('click', function () {
-    elem.classList.add('decorated')
+    elem.classList.toggle('decorated')
 })
 
 button2.addEventListener('click', function () {
-    elem.classList.add('bolded')
+    elem.classList.toggle('bolded')
 })
 
 button3.addEventListener('click', function () {
-    elem.classList.add('colored')
+    elem.classList.toggle('colored')
 })
 
