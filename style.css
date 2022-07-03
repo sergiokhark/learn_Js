@@ -1,11 +1,5 @@
 .colored {
-    color: red;
-}
-
-.decorated {
-    text-decoration:line-through;
-}
-
-.bolded {
-    font-weight: bold;
+    border: 2px solid black;
+    width: 100px;
+    
 }

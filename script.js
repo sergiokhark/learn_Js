@@ -1,17 +1,17 @@
-let elem = document.querySelector('p')
-let button1 = document.querySelector('#button1')
-let button2 = document.querySelector('#button2')
-let button3 = document.querySelector('#button3')
+let elem = document.querySelector('#elem')
 
-button1.addEventListener('click', function () {
-    elem.classList.toggle('decorated')
-})
+let elem0 = elem.previousElementSibling
+let elem1 = elem.nextElementSibling
 
-button2.addEventListener('click', function () {
-    elem.classList.toggle('bolded')
-})
+let box = elem0.innerHTML
 
-button3.addEventListener('click', function () {
-    elem.classList.toggle('colored')
-})
+
+elem0.innerHTML = elem1.innerHTML
+elem1.innerHTML = box
+
+
+
+
+
+
 
