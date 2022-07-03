@@ -1,8 +1,10 @@
-let elem = document.querySelector('#elem')
+let elem = document.querySelector('.elem')
 let button = document.querySelector('#button')
+
 button.addEventListener('click', func)
 
 function func() {
-    elem.value = elem.getAttribute('value')
-
+    elem.style.width = '250px'
+    elem.style.height = '150px'
+    elem.style.border = 'solid 2px black'
 }
