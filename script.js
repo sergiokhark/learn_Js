@@ -3,10 +3,12 @@ let elem = document.querySelector('#elem')
 elem.addEventListener('blur', func)
 
 function func() {
-    let num = String(elem.value)
+    let arr = elem.value.split(',')
     let sum = 0
-    for (let i = 0; i < num.length; i++) {
-        sum += Number(num[i])
+    for (let elem of arr) {
+        sum += Number(elem)
     }
-    alert(sum)
+    let res = sum / arr.length
+    
+    console.log('Среднее арифм =', res)
 }
