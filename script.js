@@ -1,12 +1,11 @@
-let elems = document.querySelectorAll('p')
+let elems = document.querySelectorAll('a')
 let button = document.querySelector('#button')
 
 button.addEventListener('click', func)
 
 function func() {
-    for (let i = 0; i < elems.length; i++) {
-        elems[i].innerHTML += i + 1
-        
+    for (let elem of elems) {
+        elem.innerHTML += '(' + elem.href + ')'
     }
 }
     
