@@ -1,13 +1,12 @@
-let elems = document.querySelectorAll('#elem')
-let elem = document.querySelector('.new')
-let button = document.querySelector('#button')
+let elem = document.querySelector('#elem')
 
-button.addEventListener('click', func)
+elem.addEventListener('blur', func)
 
 function func() {
+    let num = String(elem.value)
     let sum = 0
-    for (let elem of elems) {
-        sum += Number(elem.value)
+    for (let i = 0; i < num.length; i++) {
+        sum += Number(num[i])
     }
-    elem.innerHTML += sum
+    alert(sum)
 }
