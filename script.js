@@ -1,9 +1,7 @@
-let button = document.querySelector('#elem')
-
-button.addEventListener('click', function () {
-    button.dataset.user = Number(button.dataset.user) + 1  
-})
-
-button.addEventListener('dblclick', function () {
-    alert(button.dataset.user) 
+let elem = document.querySelector('#elem')
+elem.addEventListener('blur', function () {
+    
+    if (elem.value.length != elem.dataset.length) {
+        alert('Error')
+    }
 })
