@@ -1,7 +1,7 @@
-let elem = document.querySelector('#elem')
-elem.addEventListener('blur', function () {
+let elem = document.getElementById('elem')
+elem.addEventListener('click', function () {
     
-    if (elem.value.length < elem.dataset.min || elem.value.length > elem.dataset.max ) {
-        alert('Error')
-    }
-})
+    let result = elem.dataset.productPrice * elem.dataset.productAmount
+    elem.innerHTML += result
+
+    })
