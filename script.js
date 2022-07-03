@@ -1,10 +1,9 @@
-let elems = document.querySelectorAll('p')
-
-for (let elem of elems) {
-    elem.addEventListener('click', func)
-}
-
-function func() {
-    this.innerHTML = this.innerHTML + '!'
-    this.removeEventListener('click', func)
-}
+let elem = document.querySelector('#elem')
+let button = document.querySelector('#button')
+button.addEventListener('click', function () {
+    if (elem.getAttribute('value') === elem.value) {
+        console.log('Пользователь не изменил данные')
+    } else {
+        console.log('Пользователь изменил значение')
+    }
+})
