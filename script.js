@@ -1,13 +1,11 @@
-let elems = document.querySelectorAll('a')
-let button = document.querySelector('#button')
+let elems = document.querySelectorAll('p')
 
-button.addEventListener('click', func)
+for (let elem of elems) {
 
-function func() {
-    for (let elem of elems) {
-        if (elem.href.startsWith('http://')) {
-            elem.innerHTML += 'GOOD'
-        }
-    }
+    elem.addEventListener('click', func)
 }
-    
+ 
+function func() {
+    this.innerHTML = Number(this.innerHTML) ** 2
+}
+   
