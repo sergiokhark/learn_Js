@@ -1,17 +1,8 @@
-let elem = document.querySelector('#elem')
+let elem = document.querySelector('#parent')
+let elems1 = elem.querySelectorAll('.www')
+let elems2 = elem.querySelectorAll('.ggg')
 
-let elem0 = elem.previousElementSibling
-let elem1 = elem.nextElementSibling
-
-let box = elem0.innerHTML
-
-
-elem0.innerHTML = elem1.innerHTML
-elem1.innerHTML = box
-
-
-
-
-
+console.log(elems1)
+console.log(elems2)
 
 
