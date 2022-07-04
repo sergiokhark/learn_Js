@@ -1,11 +1,11 @@
-let elems = document.querySelectorAll('p')
+let elem = document.querySelector('#elem')
 
-for (let elem of elems) {
+elem.addEventListener('blur', func)
 
-    elem.addEventListener('click', func)
-}
- 
 function func() {
-    this.innerHTML = Number(this.innerHTML) ** 2
+    let arr = elem.value.split('.')
+    let [day, month, year] = arr
+    let date = new Date(year, month - 1, day)
+    let dayName = ['вс', 'пн', 'вт', 'ср', 'чт', 'пт', 'сб']
+    alert(dayName[date.getDay()])
 }
-   
