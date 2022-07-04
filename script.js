@@ -1,13 +1,11 @@
 let elem = document.querySelector('#elem')
-let button1 = document.querySelector('#button1')
-let button2 = document.querySelector('#button2')
+let button = document.querySelector('#button')
 
-button1.addEventListener('click', function () {
-    elem.disabled = true
-
-})
-
-button2.addEventListener('click', function () {
-    elem.disabled = false
+button.addEventListener('click', function () {
+    if (elem.disabled) {
+        alert('Input locked')
+    } else {
+        alert('Input unlocked')
+    }
 
 })
