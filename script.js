@@ -1,11 +1,13 @@
 let elem = document.querySelector('#elem')
+let button = document.querySelector('#button')
 
-elem.addEventListener('blur', func)
+button.addEventListener('click', func)
 
 function func() {
-    if (elem.value >= 1 && elem.value <= 100) {
-        elem.classList.add('colgreen')
-    } else {
-        elem.classList.add('colred')
+    let str = ''
+    let symbols = '0123456789qwertyuiopasdfghjklzxcvbnm'
+    for (let i = 0; i < 8; i++) {
+        str += symbols.charAt(Math.floor(Math.random() * symbols.length))
     }
+    elem.value = str
 }
