@@ -1,4 +1,7 @@
-.colored {
-    color: red;
-    
+.colgreen {
+    background-color: green;
+}
+
+.colred {
+    background-color: red;
 }

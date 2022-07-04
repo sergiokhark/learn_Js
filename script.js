@@ -1,10 +1,11 @@
-let button = document.querySelector('#button')
-let elems = document.querySelectorAll('div')
+let elem = document.querySelector('#elem')
 
-button.addEventListener('click', function () {
-    for (let elem of elems) {
-        elem.innerHTML = elem.innerHTML.slice(0, 10) + '...'
+elem.addEventListener('blur', func)
+
+function func() {
+    if (elem.value >= 1 && elem.value <= 100) {
+        elem.classList.add('colgreen')
+    } else {
+        elem.classList.add('colred')
     }
-
-})
-
+}
