@@ -1,13 +1,8 @@
-let link = document.querySelector('a')
-let elem = document.querySelector('#text')
+let elem = document.querySelector('#elem')
+let str = document.querySelector('.new')
 
-link.addEventListener('click', func)
+elem.addEventListener('keyup', func)
 
 function func() {
-	
-	if (elem.checked) {
-		elem.checked = false;
- 	} else {
-		elem.checked = true;
- 	}
-  }
+    str.innerHTML = (elem.value - 32) * (5 / 9)
+}
