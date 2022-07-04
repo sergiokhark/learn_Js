@@ -1,7 +1,13 @@
 let select = document.querySelector('#select')
-let str = document.querySelector('p')
-let button = document.querySelector('#elem')
 
-button.addEventListener('click', function () {
-    str.innerHTML = select.value
-})
+select.addEventListener('change', func)
+
+function func() {
+    let year = select.value
+    let date = new Date(year, 2, 0)
+    if (date.getDate() == 29) {
+        alert('Год високосный')
+    } else {
+        alert('Год не високосный')
+    }
+}
