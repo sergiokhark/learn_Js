@@ -1,10 +1,10 @@
-let elem = document.querySelector('#elem')
-let res = document.querySelector('.new')
+let button = document.querySelector('#button')
+let elems = document.querySelectorAll('div')
 
-elem.addEventListener('keydown', function () {
-    if (event.code == 'Enter') {
-        res.innerHTML = res.innerHTML + elem.value + ', '
-        elem.value = ''
+button.addEventListener('click', function () {
+    for (let elem of elems) {
+        elem.innerHTML = elem.innerHTML.slice(0, 10) + '...'
     }
-           
+
 })
+
