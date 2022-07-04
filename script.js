@@ -1,13 +1,9 @@
 let select = document.querySelector('#select')
-
-select.addEventListener('change', func)
-
-function func() {
-    let year = select.value
-    let date = new Date(year, 2, 0)
-    if (date.getDate() == 29) {
-        alert('Год високосный')
+    
+select.addEventListener('change', function () {
+    if (select.value == 6 || select.value == 7) {
+        alert('Выбран выходной день')
     } else {
-        alert('Год не високосный')
+        alert('Выбран рабочий день')
     }
-}
+})
