@@ -4,10 +4,16 @@ let button = document.querySelector('#button')
 button.addEventListener('click', func)
 
 function func() {
-    let str = ''
-    let symbols = '0123456789qwertyuiopasdfghjklzxcvbnm'
-    for (let i = 0; i < 8; i++) {
-        str += symbols.charAt(Math.floor(Math.random() * symbols.length))
+    let symbols = elem.value.split('')
+    let resArr = []
+    while (symbols.length > 0) {
+        let randomInd = getRandomInd(0, symbols.length - 1)
+        let elem = symbols.splice(randomInd, 1)[0];
+        resArr.push(elem)
     }
-    elem.value = str
+    elem.value = resArr.join('')
+}
+
+function getRandomInd(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min
 }
