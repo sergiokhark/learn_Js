@@ -1,12 +1,15 @@
-let elem = document.querySelector('#elem')
-let str = document.querySelector('p')
+let elem1 = document.querySelector('#elem1')
+let elem2 = document.querySelector('#elem2')
 
-elem.addEventListener('input', function () {
-    if (this.value.length <= 5) {
-        str.innerHTML = 'Разрешено ввести еще символов:' + (5 - this.value.length)
-    } else {
-        str.innerHTML = 'Ввод превышен на ' + (this.value.length - 5)
-    }
-
-
+elem1.addEventListener('input', function () {
+    if (elem1.value.length == 2) {
+        elem2.focus()
+    }   
 })
+
+elem2.addEventListener('input', function () {
+    if (elem2.value.length == 2) {
+        elem2.blur()
+    }
+})
+
