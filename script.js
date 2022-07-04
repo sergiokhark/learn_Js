@@ -1,15 +1,7 @@
-let elem1 = document.querySelector('#elem1')
-let elem2 = document.querySelector('#elem2')
+let select = document.querySelector('#select')
+let str = document.querySelector('p')
+let button = document.querySelector('#elem')
 
-elem1.addEventListener('input', function () {
-    if (elem1.value.length == 2) {
-        elem2.focus()
-    }   
+button.addEventListener('click', function () {
+    str.innerHTML = select.value
 })
-
-elem2.addEventListener('input', function () {
-    if (elem2.value.length == 2) {
-        elem2.blur()
-    }
-})
-
