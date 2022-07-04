@@ -1,10 +1,10 @@
-let elems = document.querySelectorAll('p')
-let inpElem = document.querySelector('#elem')
+let elem = document.querySelector('#elem')
+let res = document.querySelector('.new')
 
-for (let elem of elems) {
-    
-    elem.addEventListener('click', function () {
-        inpElem.value++
-
-    })
-}
+elem.addEventListener('keydown', function () {
+    if (event.code == 'Enter') {
+        res.innerHTML = res.innerHTML + elem.value + ', '
+        elem.value = ''
+    }
+           
+})
