@@ -1,6 +1,9 @@
 let elem = document.querySelector('#elem')
-let str = document.querySelector('p')
 
 elem.addEventListener('change', function () {
-    str.innerHTML = this.value
+    if (this.value.length < 5) {
+        this.classList.add('colgreen')
+    } else {
+        this.classList.add('colred')
+    }
 })
