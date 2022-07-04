@@ -1,11 +1,11 @@
 let elem = document.querySelector('#elem')
 let button = document.querySelector('#button')
+let str = document.querySelector('p')
 
 button.addEventListener('click', function () {
-    if (elem.disabled) {
-        alert('Input locked')
+    if (elem.checked) {
+        str.innerHTML = 'Привет'
     } else {
-        alert('Input unlocked')
+        str.innerHTML = 'Пока'
     }
-
 })
