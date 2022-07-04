@@ -1,8 +1,14 @@
 let elem = document.querySelector('#elem')
+let button = document.querySelector('#button')
 let str = document.querySelector('.new')
 
-elem.addEventListener('keyup', func)
+button.addEventListener('click', function () {
+    let num = Number(elem.value)
+    let factorial = 1
+    for (let i = 1; i <= num; i++) {
+        factorial *= i
+    }
+    str.innerHTML = factorial
 
-function func() {
-    str.innerHTML = (elem.value - 32) * (5 / 9)
-}
+
+})
