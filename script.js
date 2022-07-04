@@ -1,11 +1,13 @@
 let elem = document.querySelector('#elem')
+let button1 = document.querySelector('#button1')
+let button2 = document.querySelector('#button2')
 
-elem.addEventListener('blur', func)
+button1.addEventListener('click', function () {
+    elem.value = Number(elem.value) + 1
+})
 
-function func() {
-    let arr = elem.value.split('.')
-    let [day, month, year] = arr
-    let date = new Date(year, month - 1, day)
-    let dayName = ['вс', 'пн', 'вт', 'ср', 'чт', 'пт', 'сб']
-    alert(dayName[date.getDay()])
-}
+button2.addEventListener('click', function () {
+    if (elem.value != 0) {
+        elem.value = Number(elem.value) - 1
+    }  
+})
