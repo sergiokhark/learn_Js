@@ -1,12 +1,9 @@
-let elem = document.querySelector('#elem');
+let links = document.querySelectorAll('a')
 
-elem.addEventListener('click', function (event) {
-    if (event.target.tagName == 'LI' && event.ctrlKey) {
-        event.target.innerHTML += 1
-    }
+for (let link of links) {
+    link.addEventListener('click', function (event) {
+        event.preventDefault()
+        event.target.innerHTML += event.target.href
 
-    if (event.target.tagName == 'LI' && event.shiftKey) {
-        event.target.innerHTML += 2
-    }
-
-})
+    })
+}
