@@ -1,7 +1,5 @@
 let select = document.querySelector('#select')
-let elem = document.querySelector('#elem')   
+ 
+let date = new Date()
+select.selectedIndex = date.getDay() - 1
 
-elem.addEventListener('blur', function () {
-    select.selectedIndex = elem.value
-    
-})
