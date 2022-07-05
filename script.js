@@ -1,7 +1,14 @@
-let select = document.querySelector('#select')
-let button = document.querySelector('#button')
+let elem = document.querySelector('#elem');
 
-button.addEventListener('click', function () {
-    let option = select[select.selectedIndex]
-    option.text += '!'
-})
+elem.addEventListener('click', func);
+elem.addEventListener('dblclick', func);
+
+function func(event) {
+    if (event.type == 'click') {
+        elem.classList.add('colgreen')
+    }
+
+    if (event.type == 'dblclick') {
+        elem.classList.add('colred')
+    }
+}
