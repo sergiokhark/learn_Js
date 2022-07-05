@@ -1,9 +1,8 @@
-let elem = document.querySelector('#elem')
-let str = document.querySelector('p')
+let elem = document.querySelector('#elem');
 
-elem.addEventListener('keydown', function (event) {
-    if (event.code == 'Enter') {
-        str.innerHTML = elem.value
-        elem.value = ''
+elem.addEventListener('click', function (event) {
+    if (event.altKey) {
+        elem.classList.add('colred')
     }
+
 })
