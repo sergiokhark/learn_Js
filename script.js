@@ -1,5 +1,6 @@
 let select = document.querySelector('#select')
  
-let date = new Date()
-select.selectedIndex = date.getDay() - 1
+for (let option of select) {
+    option.innerHTML += option.value 
+}
 
