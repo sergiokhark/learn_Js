@@ -1,9 +1,7 @@
 let select = document.querySelector('#select')
+let elem = document.querySelector('#elem')   
+
+elem.addEventListener('blur', function () {
+    select.selectedIndex = elem.value
     
-select.addEventListener('change', function () {
-    if (select.value == 6 || select.value == 7) {
-        alert('Выбран выходной день')
-    } else {
-        alert('Выбран рабочий день')
-    }
 })
