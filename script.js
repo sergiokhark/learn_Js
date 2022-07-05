@@ -1,14 +1,8 @@
 let select = document.querySelector('#select')
+let button = document.querySelector('#button')
 
-select.addEventListener('change', function () {
-    for (let option of select) {
-        if (option.selected) {
-            option.text += '!'
-        } else {
-            option.text +='?'
-    }
-    }
-    
-   
+button.addEventListener('click', function () {
+    let option = select[select.length - 1]
+    option.selected = true
+
 })
-
