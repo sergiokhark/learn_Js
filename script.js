@@ -1,7 +1,18 @@
-let str = document.querySelector('#str')
+/*Задача 212.2
+Выведите в консоль число 0. Через секунду выведите число 1, через две секунды 
+выведите число 2, через 3 секунды выведите число 3. И так далее до бесконечности. */
 
-setTimeout(function () {
-	str.innerHTML = 'Hello world!'
 
+let i = 0
 
-}, 5000)
+function func() {
+
+	setTimeout(function () {
+		console.log(i)
+	}, 1000 * i)
+
+	i++
+	func()
+}
+
+func()
