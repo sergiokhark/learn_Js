@@ -4,8 +4,12 @@ let button = document.querySelector('#button')
 button.addEventListener('click', func)
 
 function func() {
-	setInterval(function () {
-		str.innerHTML = Number(str.innerHTML) + 1
-	}, 400)
+	let timeId = setInterval(function () {
+		str.innerHTML = Number(str.innerHTML) - 1
+		if (str.innerHTML <= 0) {
+			clearInterval(timeId)
+		}
+	}, 300)
+	
 	this.removeEventListener('click', func)
 }
