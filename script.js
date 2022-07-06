@@ -1,7 +1,7 @@
 let str = document.querySelector('#str')
 
-str.classList.add('colred')
 setInterval(function () {
-	str.classList.toggle('colred')
-	str.classList.add('colgreen')
+	let now = new Date
+	str.innerHTML = now.getHours() + ':' + now.getMinutes() + ':' + now.getSeconds()
+
 }, 1000)
