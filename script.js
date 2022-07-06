@@ -1,7 +1,20 @@
-let elem = document.querySelector('#elem');
+let start = document.querySelector('#start')
+let stop = document.querySelector('#stop')
+let timeId
 
-function func(surname, name) {
-	console.log(this.value + ', ' + surname + ' ' + name);
+start.addEventListener('click', func)
+
+function func() {
+	let i = 100
+	timeId = setInterval(function () {
+		console.log(--i)
+		if (i <= 0) {
+			clearInterval(timeId)
+	}
+	}, 500)
+	this.removeEventListener('click', func)	
 }
 
-func.apply(elem, ['Иванов', 'Иван'])
+stop.addEventListener('click', function () {
+	clearInterval(timeId)
+})
