@@ -1,17 +1,15 @@
-let elem = document.querySelector('#elem')
-let button = document.querySelector('#button')
+let button1 = document.querySelector('#button1')
+let button2 = document.querySelector('#button2')
 let str = document.querySelector('#str')
+let timeId
 
-button.addEventListener('click', func)
-
-function func() {
-	str.innerHTML = Number(elem.value)
-		let timeId = setInterval(function () {
-			str.innerHTML--
-				if (str.innerHTML <= 0) {
-					clearInterval(timeId)
-				}
-		}, 300)
-	this.removeEventListener('click', func)
-}
+button1.addEventListener('click', function () {
+	timeId = setInterval(function () {
+		str.innerHTML = Number(str.innerHTML) + 1
+	}, 300)
 	
+})
+
+button2.addEventListener('click', function () {
+	clearInterval(timeId)
+})
