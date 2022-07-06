@@ -1,20 +1,18 @@
 let start = document.querySelector('#start')
-let stop = document.querySelector('#stop')
-let timeId
+let stop  = document.querySelector('#stop')
+let timerId
 
 start.addEventListener('click', func)
-
+	
 function func() {
-	let i = 100
-	timeId = setInterval(function () {
-		console.log(--i)
-		if (i <= 0) {
-			clearInterval(timeId)
-	}
-	}, 500)
-	this.removeEventListener('click', func)	
+	timerId = setInterval(function() {
+		let date = new Date
+		console.log(date.getMinutes() + ' ' + date.getSeconds())
+	}, 1000)
+	this.removeEventListener('click', func)
 }
-
-stop.addEventListener('click', function () {
-	clearInterval(timeId)
-})
+	
+stop.addEventListener('click', function() {
+	clearInterval(timerId)
+	start.addEventListener('click', func)
+});
