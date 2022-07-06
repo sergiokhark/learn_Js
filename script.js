@@ -1,16 +1,7 @@
 let str = document.querySelector('#str')
 
-setInterval(function () {
-	let now = new Date
-	str.innerHTML = getZero(now.getHours()) + ':' + getZero(now.getMinutes()) + ':' + getZero(now.getSeconds())
+setTimeout(function () {
+	str.innerHTML = 'Hello world!'
 
-}, 1000)
 
-function getZero(num) {
-	if (num <= 9) {
-		return '0' + num
-	}
-	else {
-		return num
-	}
-}
+}, 5000)
