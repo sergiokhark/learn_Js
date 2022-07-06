@@ -1,14 +1,17 @@
 let elem = document.querySelector('#elem')
+let button = document.querySelector('#button')
 let str = document.querySelector('#str')
 
-elem.addEventListener('blur', func)
+button.addEventListener('click', func)
 
 function func() {
-	str.innerHTML = this.value
-	let timeId = setInterval(function () {
-		str.innerHTML = Number(str.innerHTML) - 1
-		if (str.innerHTML <= 0) {
-			clearInterval(timeId)
-		}
-	}, 300)
+	str.innerHTML = Number(elem.value)
+		let timeId = setInterval(function () {
+			str.innerHTML--
+				if (str.innerHTML <= 0) {
+					clearInterval(timeId)
+				}
+		}, 300)
+	this.removeEventListener('click', func)
 }
+	
