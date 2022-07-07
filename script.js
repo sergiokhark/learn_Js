@@ -1,13 +1,12 @@
+let arr = [[1, 2, 3], [4, 5, 6], [7, 8, 9], [10, 11, 12]]
 let table = document.querySelector('#table')
-let k = 2
 
-for (let i = 0; i < 5; i++) {
+for (let subArr of arr) {
 	let tr = document.createElement('tr')
 
-	for (let j = 0; j < 5; j++) {
+	for (let elem of subArr) {
 		let td = document.createElement('td')
-		td.innerHTML = k
-		k += 2
+		td.innerHTML = elem
 		tr.appendChild(td)
 	}
 
