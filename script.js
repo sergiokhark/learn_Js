@@ -1,13 +1,7 @@
 let elem = document.querySelector('#elem')
-let button = document.querySelector('#button')
 
-button.addEventListener('click', function () {
+for (let i = 1; i <= 10; i++) {
 	let li = document.createElement('li')
-	li.innerHTML = 'пункт'
-	li.addEventListener('click', function () {
-		li.innerHTML += '!'
-	})
-	
+	li.innerHTML = i
 	elem.appendChild(li)
-	
-})
+}
