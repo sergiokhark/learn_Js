@@ -15,6 +15,10 @@ for (let elem of employees) {
 	let td2 = document.createElement('td')
 	td2.innerHTML = elem.age
 	tr.appendChild(td2)
+	td2.addEventListener('click', function () {
+		td2.innerHTML++
+	})
+	
 
 	let td3 = document.createElement('td')
 	td3.innerHTML = elem.salary
