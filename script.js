@@ -4,8 +4,9 @@ let elem1 = document.querySelector('#elem')
 for (let elem of arr) {
 	let li = document.createElement('li')
 	li.innerHTML = elem
-	li.addEventListener('click', function () {
-		alert(li.innerHTML)
+	li.addEventListener('click', function func () {
+		li.innerHTML += '!'
+		this.removeEventListener('click', func)
 	})
 
 
