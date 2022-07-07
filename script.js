@@ -1,11 +1,13 @@
-let elem1 = document.querySelector('#elem1')
-let elem2 = document.querySelector('#elem2')
+let parent = document.querySelector('#parent');
 
-for (let i = 0; i < 5; i++) {
-	let inp = document.createElement('input')
-	inp.addEventListener('blur', function () {
-		elem2.innerHTML = this.value
+let arr = [1, 2, 3, 4, 5];
+
+for (let elem of arr) {
+	let p = document.createElement('p');
+	p.innerHTML = elem;
+	p.addEventListener('click', function () {
+		p.innerHTML = Number(p.innerHTML) + 1
 	})
-
-	elem1.appendChild(inp)
+	
+	parent.appendChild(p);
 }
