@@ -1,15 +1,12 @@
-let arr = [1, 8, 12, 23, 42, 33]
-let elem1 = document.querySelector('#elem')
+let table = document.querySelector('#table')
 
-for (let elem of arr) {
-	let li = document.createElement('li')
-	li.innerHTML = elem
-	li.addEventListener('click', function func () {
-		li.innerHTML += '!'
-		this.removeEventListener('click', func)
-	})
-
-
-	elem1.appendChild(li)
+for (let i = 0; i < 5; i++) {
+	let tr = document.createElement('tr')
 	
+	for (let j = 0; j < 5; j++) {
+		let td = document.createElement('td')
+		tr.appendChild(td)
+	}
+
+	table.appendChild(tr)
 }
