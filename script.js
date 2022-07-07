@@ -1,14 +1,25 @@
-let arr = [[1, 2, 3], [4, 5, 6], [7, 8, 9], [10, 11, 12]]
+let employees = [
+	{name: 'employee1', age: 30, salary: 400},
+	{name: 'employee2', age: 31, salary: 500},
+	{name: 'employee3', age: 32, salary: 600},
+]
 let table = document.querySelector('#table')
 
-for (let subArr of arr) {
+for (let elem of employees) {
 	let tr = document.createElement('tr')
+	
+	let td1 = document.createElement('td')
+	td1.innerHTML = elem.name
+	tr.appendChild(td1)
 
-	for (let elem of subArr) {
-		let td = document.createElement('td')
-		td.innerHTML = elem ** 2
-		tr.appendChild(td)
-	}
+	let td2 = document.createElement('td')
+	td2.innerHTML = elem.age
+	tr.appendChild(td2)
+
+	let td3 = document.createElement('td')
+	td3.innerHTML = elem.salary
+	tr.appendChild(td3)
 
 	table.appendChild(tr)
+
 }
