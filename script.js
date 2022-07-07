@@ -6,7 +6,7 @@ for (let subArr of arr) {
 
 	for (let elem of subArr) {
 		let td = document.createElement('td')
-		td.innerHTML = elem
+		td.innerHTML = elem ** 2
 		tr.appendChild(td)
 	}
 
