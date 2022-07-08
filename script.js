@@ -1,7 +1,7 @@
-let parent = document.querySelector('#parent')
-let button = document.querySelector('#button')
+let elem = document.querySelector('#elem')
 
-button.addEventListener('click', function () {
-	let lastElem = parent.lastElementChild
-	parent.removeChild(lastElem)
+elem.addEventListener('click', function () {
+	elem.parentElement.removeChild(elem)
+
 })
+
