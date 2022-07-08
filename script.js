@@ -1,7 +1,10 @@
-let table = document.querySelector('#table')
-let tds = document.querySelectorAll('#table td')
+let trs = document.querySelectorAll('#table tr')
 
-let i = tds.length
-for (let td of tds) {
-	td.innerHTML = i--
+for (let i = 0; i < trs.length; i++) {
+	let tr = trs[i]
+	let tds = tr.querySelectorAll('td')
+
+	for (let j = 0; j < tds.length; j++) {
+		tds[j].innerHTML = j + 1
+	}
 }
