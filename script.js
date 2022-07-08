@@ -1,10 +1,7 @@
-let parent = document.querySelector('#parent')
 let elem = document.querySelector('#elem')
+let button = document.querySelector('#button')
 
-let li = document.createElement('li')
-li.innerHTML = 'new'
-li.addEventListener('click', function () {
-	li.innerHTML += '!'
+button.addEventListener('click', function () {
+	let clone = elem.cloneNode(true)
+	elem.insertAdjacentElement('afterend', clone)
 })
-
-parent.insertBefore(li, elem)
