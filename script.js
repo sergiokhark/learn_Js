@@ -1,9 +1,7 @@
+let parent = document.querySelector('#parent')
 let elem = document.querySelector('#elem')
 
-let li1 = document.createElement('li')
-li1.innerHTML = 'start'
-let li2 = document.createElement('li')
-li2.innerHTML = 'finish'
+let li = document.createElement('li')
+li.innerHTML = 'new'
 
-elem.prepend(li1)
-elem.append(li2)
+parent.insertBefore(li, elem)
