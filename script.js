@@ -1,22 +1,10 @@
 let button = document.querySelector('#button')
 let table = document.querySelector('#table')
+let tds = document.querySelectorAll('#table td')
 
 
 button.addEventListener('click', function () {
-	let tr = document.createElement('tr')
-	
-	for (let i = 1; i <= 2; i++) {
-		let td = document.createElement('td')
-		tr.appendChild(td)
-		table.appendChild(tr)
+	for (let td of tds) {
+		td.innerHTML *= 2
 	}
-
-	let trs = document.querySelectorAll('#table tr')
-
-	for (let tr of trs) {
-		let td = document.createElement('td')
-		tr.appendChild(td)
-		table.appendChild(tr)
-	}
-	
 })
