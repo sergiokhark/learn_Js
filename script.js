@@ -1,8 +1,10 @@
 let tds = document.querySelectorAll('#table td')
 
-for (let i = 0; i < tds.length; i++) {
-	tds[i].addEventListener('click', function () {
-		tds[i].innerHTML = tds.length - i
+let i = 1
+for (let td of tds) {
+	td.addEventListener('click', function func() {
+		this.innerHTML = i
+		i++
+		this.removeEventListener('click', func)
 	})
 }
-
