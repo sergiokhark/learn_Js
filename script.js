@@ -1,16 +1,20 @@
-let lis = document.querySelectorAll('#parent li')
+let table = document.querySelector('#table')
+let trs = document.querySelectorAll('#table tr')
 
-for (let li of lis) {
+for (let tr of trs) {
+	let td = document.createElement('td')
+	
 	let link = document.createElement('a')
 	link.href = '#'
-	link.innerHTML = 'Remove'
+	link.innerHTML = 'Del'
+	
+	td.appendChild(link)
+	tr.appendChild(td)
+
 	link.addEventListener('click', function () {
-		li.parentElement.removeChild(li)
-		//li.remove()
+		tr.remove()
 	})
-	
-	li.appendChild(link)
-	
 
 
 }
+
