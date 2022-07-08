@@ -1,10 +1,8 @@
-let trs = document.querySelectorAll('#table tr')
+let tds = document.querySelectorAll('#table td')
 
-for (let i = 0; i < trs.length; i++) {
-	let tr = trs[i]
-	let tds = tr.querySelectorAll('td')
-
-	for (let j = 0; j < tds.length; j++) {
-		tds[j].innerHTML = j + 1
-	}
+for (let i = 0; i < tds.length; i++) {
+	tds[i].addEventListener('click', function () {
+		tds[i].innerHTML = tds.length - i
+	})
 }
+
