@@ -1,5 +1,8 @@
-let elem = document.querySelector('#elem')
+let parent = document.querySelector('#parent')
+let lis = parent.querySelectorAll('li')
 
-elem.addEventListener('click', function () {
-	elem.remove()
-})
+for (let li of lis) {
+	li.addEventListener('click', function () {
+		parent.removeChild(this)
+	})
+}
