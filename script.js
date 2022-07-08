@@ -1,8 +1,16 @@
-let elem = document.querySelector('#elem')
-let link = document.querySelector('#remove')
+let lis = document.querySelectorAll('#parent li')
 
-link.addEventListener('click', function (event) {
-	//elem.remove()
-	elem.parentElement.removeChild(elem)
-	event.preventDefault()
-})
+for (let li of lis) {
+	let link = document.createElement('a')
+	link.href = '#'
+	link.innerHTML = 'Remove'
+	link.addEventListener('click', function () {
+		li.parentElement.removeChild(li)
+		//li.remove()
+	})
+	
+	li.appendChild(link)
+	
+
+
+}
