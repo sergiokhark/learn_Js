@@ -1,20 +1,9 @@
-let table = document.querySelector('#table')
-let trs = document.querySelectorAll('#table tr')
+let elem = document.querySelector('#elem')
 
-for (let tr of trs) {
-	let td = document.createElement('td')
-	
-	let link = document.createElement('a')
-	link.href = '#'
-	link.innerHTML = 'Del'
-	
-	td.appendChild(link)
-	tr.appendChild(td)
+let li1 = document.createElement('li')
+li1.innerHTML = 'start'
+let li2 = document.createElement('li')
+li2.innerHTML = 'finish'
 
-	link.addEventListener('click', function () {
-		tr.remove()
-	})
-
-
-}
-
+elem.prepend(li1)
+elem.append(li2)
