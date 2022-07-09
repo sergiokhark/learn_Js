@@ -1,7 +1,8 @@
 let elem = document.querySelector('#elem')
-let button = document.querySelector('#button')
+let input = document.querySelector('#input')
 
-button.addEventListener('click', function () {
-	let clone = elem.cloneNode(true)
-	elem.insertAdjacentElement('afterend', clone)
-})
+input.value = elem.innerHTML
+
+input.addEventListener('input', function () {
+	elem.innerHTML = this.value;
+});
