@@ -8,6 +8,6 @@ for (let tr of trs) {
 	td.appendChild(link)
 	tr.appendChild(td)
 	link.addEventListener('click', function () {
-		tr.classList.add('colgreen')
+		tr.classList.toggle('colgreen')
 	})
 }
