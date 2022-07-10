@@ -1,20 +1,13 @@
-let elems = document.querySelectorAll('p')
+let trs = document.querySelectorAll('tr')
 
-for (let elem of elems) {
-	elem.innerHTML = '<span>' + elem.innerHTML + '</span>'
-}
-
-let elems2 = document.querySelectorAll('span')
-
-for (let elem2 of elems2) {
+for (let tr of trs) {
+	let td = document.createElement('td')
 	let link = document.createElement('a')
-	link.innerHTML = 'push'
+	link.innerHTML = 'Color'
 	link.href = '#'
-	elem2.parentElement.appendChild(link)
-	
+	td.appendChild(link)
+	tr.appendChild(td)
 	link.addEventListener('click', function () {
-		elem2.classList.add('decoration')
-		elem2.parentElement.removeChild(link)
+		tr.classList.add('colgreen')
 	})
 }
-	
