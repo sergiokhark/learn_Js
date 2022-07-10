@@ -1,7 +1,7 @@
-let buttons = document.querySelectorAll('button')
+let elems = document.querySelectorAll('li')
 
-for (let button of buttons) {
-	button.addEventListener('click', function () {
-		button.previousElementSibling.classList.toggle('hidden')
+for (let elem of elems) {
+	elem.addEventListener('click', function () {
+		elem.classList.add('active')
 	})
 }
