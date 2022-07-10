@@ -11,3 +11,7 @@ td {
     height: 50px;
     border: 1px solid black;
 }
+
+.decoration {
+    text-decoration: line-through;
+}
