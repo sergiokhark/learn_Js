@@ -1,11 +1,14 @@
-let tds = document.querySelectorAll('td')
+let trs = document.querySelectorAll('tr')
 
-for (let td of tds) {
-	
-	td.addEventListener('click', function () {
-		activeTds = document.querySelectorAll('td.active')
-		if (activeTds.length < 3) {
-			td.classList.add('active')
-		}
-	})
+for (let tr of trs) {
+	let tds = tr.querySelectorAll('td')
+	for (let td of tds) {
+		td.addEventListener('click', function () {
+			let tdsActive = tr.querySelectorAll('td.active')
+			if (tdsActive.length < 5) {
+				td.classList.add('active')
+			}
+		})
+	}
 }
+
