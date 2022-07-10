@@ -1,16 +1,15 @@
 let elem = document.querySelector('#elem')
 
-elem.addEventListener('click', function () {
+elem.addEventListener('click', function func() {
 	let input = document.createElement('input')
 	input.value = elem.innerHTML
-	elem.parentElement.appendChild(input)
+	elem.innerHTML = ''
+	
+	elem.appendChild(input)
+	elem.removeEventListener('click', func)
 
 	input.addEventListener('blur', function () {
 		elem.innerHTML = input.value
-		elem.parentElement.removeChild(input)
+		elem.addEventListener('click', func)
 	})
-
-
-
 })
-
