@@ -1,14 +1,13 @@
-let trs = document.querySelectorAll('tr')
+let tds = document.querySelectorAll('td')
 
-for (let tr of trs) {
-	let tds = tr.querySelectorAll('td')
-	for (let td of tds) {
-		td.addEventListener('click', function () {
-			let tdsActive = tr.querySelectorAll('td.active')
-			if (tdsActive.length < 5) {
-				td.classList.add('active')
-			}
-		})
-	}
+for (let td of tds) {
+	td.addEventListener('click', function () {
+		
+		if ((!td.previousElementSibling.classList.contains('active') &&
+			!td.nextElementSibling.classList.contains('active')) ||
+			td.previousElementSibling === null || td.nextElementSibling === null) {
+			
+			td.classList.add('active')
+		}
+	})
 }
-
