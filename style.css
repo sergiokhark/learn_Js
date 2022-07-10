@@ -15,3 +15,7 @@ td {
 .decoration {
     text-decoration: line-through;
 }
+
+.hidden {
+    display: none;
+}

@@ -1,13 +1,6 @@
-let trs = document.querySelectorAll('tr')
+let elem = document.querySelector('#elem')
+let button = document.querySelector('#button')
 
-for (let tr of trs) {
-	let td = document.createElement('td')
-	let link = document.createElement('a')
-	link.innerHTML = 'Color'
-	link.href = '#'
-	td.appendChild(link)
-	tr.appendChild(td)
-	link.addEventListener('click', function () {
-		tr.classList.toggle('colgreen')
-	})
-}
+button.addEventListener('click', function () {
+	elem.classList.toggle('hidden')
+})
