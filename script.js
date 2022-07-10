@@ -11,8 +11,10 @@ for (let elem2 of elems2) {
 	link.innerHTML = 'push'
 	link.href = '#'
 	elem2.parentElement.appendChild(link)
+	
 	link.addEventListener('click', function () {
 		elem2.classList.add('decoration')
+		elem2.parentElement.removeChild(link)
 	})
 }
 	
