@@ -1,18 +1,17 @@
-let elems = document.querySelectorAll('#elem li')
+let tds = document.querySelectorAll('#table td')
 
-for (let elem of elems) {
-	elem.addEventListener('click', function func() {
+for (let td of tds) {
+	td.addEventListener('click', function func() {
 		let input = document.createElement('input')
-		input.value = elem.innerHTML
-		elem.innerHTML = ''
-
-		elem.appendChild(input)
-		elem.removeEventListener('click', func)
+		input.value = td.innerHTML
+		td.innerHTML = ''
+		td.appendChild(input)
+		td.removeEventListener('click', func)
 
 		input.addEventListener('blur', function () {
-			elem.innerHTML = input.value
-			elem.addEventListener('click', func)
+			td.innerHTML = input.value
+			td.addEventListener('click', func)
 		})
-
 	})
+	
 }
