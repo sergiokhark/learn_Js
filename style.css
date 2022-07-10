@@ -19,3 +19,11 @@ td {
 .hidden {
     display: none;
 }
+
+.color1 {
+    background: red;
+}
+
+.color2 {
+    background: green;
+}

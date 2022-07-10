@@ -1,7 +1,14 @@
-let elems = document.querySelectorAll('li')
+let tds = document.querySelectorAll('td')
+let color = 'color1'
 
-for (let elem of elems) {
-	elem.addEventListener('click', function () {
-		elem.classList.toggle('active')
+for (let td of tds) {
+	
+	td.addEventListener('click', function () {
+		if (color === 'color1') {
+			color = 'color2'
+		} else {
+			color = 'color1'
+		}
+		td.classList.add(color)
 	})
 }
