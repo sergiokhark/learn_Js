@@ -13,21 +13,5 @@ td {
 }
 
 .active {
-    background: red;
-}
-
-.hidden {
-    display: none;
-}
-
-.color1 {
-    background: red;
-}
-
-.color2 {
-    background: green;
-}
-
-.color3 {
-    background: yellow;
+    background: blue;
 }
