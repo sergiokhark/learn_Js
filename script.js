@@ -1,8 +1,16 @@
 let elem = document.querySelector('#elem')
-let input = document.querySelector('#input')
 
-input.value = elem.innerHTML
+elem.addEventListener('click', function () {
+	let input = document.createElement('input')
+	input.value = elem.innerHTML
+	elem.parentElement.appendChild(input)
 
-input.addEventListener('input', function () {
-	elem.innerHTML = this.value;
-});
+	input.addEventListener('blur', function () {
+		elem.innerHTML = input.value
+		elem.parentElement.removeChild(input)
+	})
+
+
+
+})
+
