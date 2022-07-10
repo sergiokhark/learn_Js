@@ -1,8 +1,8 @@
 let buttons = document.querySelectorAll('button')
+let elems = document.querySelectorAll('p')
 
-for (let button of buttons) {
-	button.addEventListener('click', function () {
-		let elem = document.querySelector('#' + button.dataset.elem)
-		elem.classList.toggle('hidden')
+for (let i = 0; i < buttons.length; i++) {
+	buttons[i].addEventListener('click', function () {
+		elems[i].classList.toggle('hidden')
 	})
 }
