@@ -10,18 +10,24 @@ for (let employee of employees) {
 	let ul = document.createElement('ul')
 	
 	let li1 = document.createElement('li')
-	li1.innerHTML = employee.name
-	li1.addEventListener('click', edit)
+	li1.innerHTML = '<span>' + employee.name + '</span>'
+	li1.firstElementChild.addEventListener('click', edit)
+	let link1 = addDeleteLink(li1)
+	li1.appendChild(link1)
 	ul.appendChild(li1)
 
 	let li2 = document.createElement('li')
-	li2.innerHTML = employee.age
-	li2.addEventListener('click', edit)
+	li2.innerHTML = '<span>' + employee.age + '</span>'
+	li2.firstElementChild.addEventListener('click', edit)
+	let link2 = addDeleteLink(li2)
+	li2.appendChild(link2)
 	ul.appendChild(li2)
 
 	let li3 = document.createElement('li')
-	li3.innerHTML = employee.salary
-	li3.addEventListener('click', edit)
+	li3.innerHTML = '<span>' + employee.salary + '</span>'
+	li3.firstElementChild.addEventListener('click', edit)
+	let link3 = addDeleteLink(li3)
+	li3.appendChild(link3)
 	ul.appendChild(li3)
 
 	parent.appendChild(ul)
@@ -40,3 +46,12 @@ function edit() {
 	})
 }
 
+function addDeleteLink(li) {
+	let link = document.createElement('a')
+	link.innerHTML = 'Delete'
+	link.href = '#'
+	link.addEventListener('click', function () {
+		li.parentElement.removeChild(li)
+	})
+	return link
+}
