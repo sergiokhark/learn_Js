@@ -54,7 +54,33 @@ for (let tr of trs) {
 	link.addEventListener('click', function () {
 		table.removeChild(tr)
 	})
-	
+
 	td.appendChild(link)
 	tr.appendChild(td)
 }
+
+let input1 = document.querySelector('#input1')
+let input2 = document.querySelector('#input2')
+let input3 = document.querySelector('#input3')
+let button = document.querySelector('#button')
+
+button.addEventListener('click', function () {
+	let tr = document.createElement('tr')
+	
+	let td1 = document.createElement('td')
+	td1.innerHTML = input1.value
+	td1.addEventListener('click', edit)
+	tr.appendChild(td1)
+
+	let td2 = document.createElement('td')
+	td2.innerHTML = input2.value
+	td2.addEventListener('click', edit)
+	tr.appendChild(td2)
+
+	let td3 = document.createElement('td')
+	td3.innerHTML = input3.value
+	td3.addEventListener('click', edit)
+	tr.appendChild(td3)
+
+	table.appendChild(tr)
+})
