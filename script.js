@@ -5,29 +5,50 @@ let elem = document.querySelector('#elem')
 for (let elem of arr) {										
 	let li = document.createElement('li')
 	li.innerHTML = '<span>' + elem + '</span>'
-	let link = document.createElement('a')
+	
+	let link = document.createElement('a')				//ссылка на удаление
 	link.innerHTML = 'удалить'
 	link.href = '#'
 	link.addEventListener('click', function () {
 		parent.removeChild(li)
 	})
+	li.appendChild(link)
+
+	let linkStyle = document.createElement('a')			//ссылка стиль
+	linkStyle.innerHTML = 'перечеркнуть'
+	linkStyle.href = '#'
+	linkStyle.addEventListener('click', function () {
+		li.firstElementChild.classList.add('decorated')
+	})
+	li.appendChild(linkStyle)
+
 	li.firstElementChild.addEventListener('click', getEdit)
 	parent.appendChild(li)
-	li.appendChild(link)
 }
 
 elem.addEventListener('blur', function () {                 
 	let li = document.createElement('li')
 	li.innerHTML = '<span>' + elem.value + '</span>'
+
 	let link = document.createElement('a')
 	link.innerHTML = 'удалить'
 	link.href = '#'
 	link.addEventListener('click', function () {
 		parent.removeChild(li)
 	})
+	li.appendChild(link)
+	
+	let linkStyle = document.createElement('a')			//ссылка стиль
+	linkStyle.innerHTML = 'перечеркнуть'
+	linkStyle.href = '#'
+	linkStyle.addEventListener('click', function () {
+		li.firstElementChild.classList.add('decorated')
+	})
+	li.appendChild(linkStyle)
+	
 	li.firstElementChild.addEventListener('click', getEdit)
 	parent.appendChild(li)
-	li.appendChild(link)
+	
 })
 
 function getEdit() {			

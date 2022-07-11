@@ -15,3 +15,7 @@ td {
 .active {
     background: blue;
 }
+
+.decorated {
+    text-decoration: line-through;
+}
