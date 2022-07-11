@@ -43,3 +43,18 @@ function edit() {
 	})
 	
 }
+
+let trs = document.querySelectorAll('tr')
+
+for (let tr of trs) {
+	let td = document.createElement('td')
+	let link = document.createElement('a')
+	link.innerHTML = 'Delete'
+	link.href = '#'
+	link.addEventListener('click', function () {
+		table.removeChild(tr)
+	})
+	
+	td.appendChild(link)
+	tr.appendChild(td)
+}
