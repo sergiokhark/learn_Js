@@ -2,6 +2,34 @@ let arr = [18, 22, 12, 55, 556]
 let parent = document.querySelector('#parent')
 let elem = document.querySelector('#elem')
 
+for (let elem of arr) {										
+	let li = document.createElement('li')
+	li.innerHTML = '<span>' + elem + '</span>'
+	let link = document.createElement('a')
+	link.innerHTML = 'удалить'
+	link.href = '#'
+	link.addEventListener('click', function () {
+		parent.removeChild(li)
+	})
+	li.firstElementChild.addEventListener('click', getEdit)
+	parent.appendChild(li)
+	li.appendChild(link)
+}
+
+elem.addEventListener('blur', function () {                 
+	let li = document.createElement('li')
+	li.innerHTML = '<span>' + elem.value + '</span>'
+	let link = document.createElement('a')
+	link.innerHTML = 'удалить'
+	link.href = '#'
+	link.addEventListener('click', function () {
+		parent.removeChild(li)
+	})
+	li.firstElementChild.addEventListener('click', getEdit)
+	parent.appendChild(li)
+	li.appendChild(link)
+})
+
 function getEdit() {			
 	let inp = document.createElement('input')
 	inp.value = this.innerHTML
@@ -14,17 +42,3 @@ function getEdit() {
 		self.addEventListener('click', getEdit)
 	})
 }
-
-for (let elem of arr) {										//делаем из массива строки Li
-	let li = document.createElement('li')
-	li.innerHTML = elem
-	li.addEventListener('click', getEdit)
-	parent.appendChild(li)
-}
-
-elem.addEventListener('blur', function () {                 //создаем строки li из инпута
-	let li = document.createElement('li')
-	li.innerHTML = elem.value
-	li.addEventListener('click', getEdit)
-	parent.appendChild(li)	
-})
