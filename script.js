@@ -8,9 +8,10 @@ function getEdit() {
 	this.innerHTML = ''
 	this.appendChild(inp)
 	this.removeEventListener('click', getEdit)
+	let self = this
 	inp.addEventListener('blur', function () {
-		li.innerHTML = inp.value
-		li.addEventListener('click', getEdit)
+		self.innerHTML = inp.value
+		self.addEventListener('click', getEdit)
 	})
 }
 
