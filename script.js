@@ -23,3 +23,23 @@ for (let employee of employees) {
 
 	table.appendChild(tr)
 }
+
+let tds = document.querySelectorAll('td')
+
+for (let td of tds) {
+	td.addEventListener('click', edit)
+}
+
+function edit() {
+	let input = document.createElement('input')
+	input.value = this.innerHTML
+	this.innerHTML = ''
+	this.appendChild(input)
+	this.removeEventListener('click', edit)
+	let self = this
+	input.addEventListener('blur', function () {
+		self.innerHTML = input.value
+		self.addEventListener('click', edit)
+	})
+	
+}
