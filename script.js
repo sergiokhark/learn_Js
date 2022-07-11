@@ -11,16 +11,32 @@ for (let employee of employees) {
 	
 	let li1 = document.createElement('li')
 	li1.innerHTML = employee.name
+	li1.addEventListener('click', edit)
 	ul.appendChild(li1)
 
 	let li2 = document.createElement('li')
 	li2.innerHTML = employee.age
+	li2.addEventListener('click', edit)
 	ul.appendChild(li2)
 
 	let li3 = document.createElement('li')
 	li3.innerHTML = employee.salary
+	li3.addEventListener('click', edit)
 	ul.appendChild(li3)
 
 	parent.appendChild(ul)
+}
+
+function edit() {
+	let input = document.createElement('input')
+	input.value = this.innerHTML
+	this.innerHTML = ''
+	this.appendChild(input)
+	this.removeEventListener('click', edit)
+	let self = this
+	input.addEventListener('blur', function () {
+		self.innerHTML = input.value
+		self.addEventListener('click', edit)
+	})
 }
 
