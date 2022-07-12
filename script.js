@@ -1,11 +1,12 @@
-let tds = document.querySelectorAll('td')
+let row = 2   //строка
+let col = 3   //столбец
+let button = document.querySelector('#button')
 
-for (let td of tds) {
-	td.addEventListener('click', function () {
-		let num = this.dataset.col
-		let tds1 = document.querySelectorAll('#table td[data-col="' + num + '"]')
-		for (let td of tds1) {
-			td.classList.add('colred')
+button.addEventListener('click', function () {
+	let rows = document.querySelectorAll('#table td[data-row="' + row + '"]')
+	for (let elem of rows) {
+		if (elem.dataset.col == col) {
+			elem.classList.add('colred')
 		}
-	})
-}
+	}
+})
