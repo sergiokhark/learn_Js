@@ -55,3 +55,34 @@ function addDeleteLink(li) {
 	})
 	return link
 }
+
+let input1 = document.querySelector('#input1')
+let input2 = document.querySelector('#input2')
+let input3 = document.querySelector('#input3')
+let button = document.querySelector('#button')
+
+button.addEventListener('click', function () {
+	let ul = document.createElement('ul')
+	let li1 = document.createElement('li')
+	li1.innerHTML = '<span>' + input1.value + '</span>'
+	li1.firstElementChild.addEventListener('click', edit)
+	ul.appendChild(li1)
+	let link1 = addDeleteLink(li1)
+	li1.appendChild(link1)
+
+	let li2 = document.createElement('li')
+	li2.innerHTML = '<span>' + input2.value + '</span>'
+	li2.firstElementChild.addEventListener('click', edit)
+	ul.appendChild(li2)
+	let link2 = addDeleteLink(li2)
+	li2.appendChild(link2)
+
+	let li3 = document.createElement('li')
+	li3.innerHTML = '<span>' + input3.value + '</span>'
+	li3.firstElementChild.addEventListener('click', edit)
+	ul.appendChild(li3)
+	let link3 = addDeleteLink(li3)
+	li3.appendChild(link3)
+
+	parent.appendChild(ul)
+})
