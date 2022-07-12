@@ -1,7 +1,9 @@
 let div = document.querySelector('#elem')
 let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
-let cols = 4
-let table = createTableByArr(convertArr(arr, cols))
+let cols = 5
+let twoDimArr = convertArr(arr, cols)
+let normalTwoDimArr = normalizeArr(twoDimArr, cols, '')
+let table = createTableByArr(normalTwoDimArr)
 div.appendChild(table)
 
 function createTableByArr(arr) {
@@ -28,3 +30,13 @@ function convertArr(arr, cols) {
 	
 }
 
+function normalizeArr(arr, cols, fill) {
+	let result = []
+	for (let subArr of arr) {
+		while (subArr.length < cols) {
+			subArr.push(fill)
+		}
+		result.push(subArr)
+	}
+	return result
+}
