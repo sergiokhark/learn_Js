@@ -1,12 +1,8 @@
-let row = 2   //строка
-let col = 3   //столбец
-let button = document.querySelector('#button')
+let trs = document.querySelectorAll('#table tr')
 
-button.addEventListener('click', function () {
-	let rows = document.querySelectorAll('#table td[data-row="' + row + '"]')
-	for (let elem of rows) {
-		if (elem.dataset.col == col) {
-			elem.classList.add('colred')
-		}
+for (let tr of trs) {
+	let tds = tr.querySelectorAll('td')
+	for (let i = 0; i < tds.length; i++) {
+		tds[i].dataset.col = i + 1
 	}
-})
+}
