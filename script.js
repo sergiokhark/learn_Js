@@ -1,8 +1,10 @@
-function appendText(selector, text) {
+function forEach(selector, func) {
 	let elems = document.querySelectorAll(selector)
 	for (let elem of elems) {
-		elem.innerHTML += text
+		func(elem)
 	}
 }
 
-appendText('.elem', '777')
+forEach('.elem', function (elem) {
+	elem.innerHTML += '!'
+})
