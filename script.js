@@ -9,3 +9,10 @@ for (let i = 0; i < trs.length; i++) {
 		
 	}
 }
+
+let tds = document.querySelectorAll('td')
+for (let td of tds) {
+	td.addEventListener('click', function () {
+		td.innerHTML = td.dataset.row + ' ' + td.dataset.col
+	})
+}
