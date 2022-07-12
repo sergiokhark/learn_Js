@@ -1,12 +1,19 @@
-let elem = document.querySelector('#elem')
-let arr = [123, 345, 44, 18, 55, 900]
-
-function appendElem(elem, text) {
-	let li = document.createElement('li')
-	li.innerHTML = text
-	elem.appendChild(li)
+function createTable(rows, cols, parent) {
+	let table = document.createElement('table');
+	
+	
+	for (let i = 0; i < rows; i++) {
+		let tr = document.createElement('tr')
+		for (let j = 0; j < cols; j++) {
+			let td = document.createElement('td')
+			tr.appendChild(td)
+		}
+		table.appendChild(tr)
+	}
+	
+	parent.appendChild(table)
 }
 
-for (let text of arr) {
-	appendElem(elem, text)
-}
+let parent = document.querySelector('#parent')
+
+createTable(8, 10, parent)
