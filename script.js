@@ -11,5 +11,5 @@ function createTable(rows, cols) {
 	return table
 }
 
-let div = document.querySelector('#parent')
+let div = document.querySelector('#elem')
 div.appendChild(createTable(5, 5))
