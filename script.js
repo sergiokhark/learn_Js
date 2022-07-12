@@ -1,9 +1,10 @@
-function appendText(elems, text) {
-	for (let elem of elems) {
-		elem.innerHTML += text
-	}
+function appendElem(elem, text) {
+	let li = document.createElement('li')
+	li.innerHTML = text
+	elem.appendChild(li)
 }
 
-let elems = document.querySelectorAll('p')
 
-appendText(elems, '!!!')
+let elem = document.querySelector('#elem')
+
+appendElem(elem, '!!!!')
