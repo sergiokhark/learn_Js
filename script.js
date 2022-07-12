@@ -1,9 +1,13 @@
-function createTable(rows, cols) {
-	let table = document.createElement('table');
-	for (let i = 0; i < rows; i++) {
+let div = document.querySelector('#elem')
+let arr = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+
+function createTableByArr(arr) {
+	let table = document.createElement('table')
+	for (let subArr of arr) {
 		let tr = document.createElement('tr')
-		for (let j = 0; j < cols; j++) {
+		for (let elem of subArr) {
 			let td = document.createElement('td')
+			td.innerHTML = elem
 			tr.appendChild(td)
 		}
 		table.appendChild(tr)
@@ -11,5 +15,4 @@ function createTable(rows, cols) {
 	return table
 }
 
-let div = document.querySelector('#elem')
-div.appendChild(createTable(5, 5))
+div.appendChild(createTableByArr(arr))
