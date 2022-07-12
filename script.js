@@ -1,7 +1,5 @@
-function createTable(rows, cols, parent) {
+function createTable(rows, cols) {
 	let table = document.createElement('table');
-	
-	
 	for (let i = 0; i < rows; i++) {
 		let tr = document.createElement('tr')
 		for (let j = 0; j < cols; j++) {
@@ -10,10 +8,8 @@ function createTable(rows, cols, parent) {
 		}
 		table.appendChild(tr)
 	}
-	
-	parent.appendChild(table)
+	return table
 }
 
-let parent = document.querySelector('#parent')
-
-createTable(8, 10, parent)
+let div = document.querySelector('#parent')
+div.appendChild(createTable(5, 5))
