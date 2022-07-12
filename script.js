@@ -1,10 +1,7 @@
-function appendText(elem, text) {
-	elem.innerHTML += text
+function setValue(elem, text) {
+	elem.value = text
 }
 
-let elems = document.querySelectorAll('.elem')
+let elem = document.querySelector('#input')
 
-for (let elem of elems) {
-	appendText(elem, '!!!')
-}
-
+setValue(elem, 'privet')
