@@ -1,7 +1,7 @@
 let app = new Vue({
 	el: '#app',
 	data: {
-		arr: [1, 2, 3, 4, 5],
+		arr: ['user1', 'user2', 'user3'],
 	}
 })
 
