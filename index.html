@@ -13,7 +13,7 @@
     
     <div id="app">
         <ul>
-            <li v-for="(item, index) in arr"> {{ item }} - {{ index }} </li>
+            <li v-for="(value, key, index) in obj"> {{ key }} - {{ value }} - {{ index + 1 }} </li>
         </ul>
         
         
