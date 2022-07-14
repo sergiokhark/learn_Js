@@ -4,8 +4,9 @@ let app = new Vue({
 		arr: [1, 12, 18, 23, 45, 44, 55, 3, 4],
 	},
 	methods: {
-		removeElem: function (index) {
-			this.arr.splice(index, 1)
+		squareElem: function (index) {
+			let elem = this.arr.splice(index, 1) ** 2
+			this.arr.splice(index, 0, elem)
 		}
 	}
 });
