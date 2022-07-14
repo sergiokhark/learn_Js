@@ -12,12 +12,9 @@
 <body>
     <div id="app">
  
-        <p v-if="show1"> {{ text }} 1 </p>
-        <p v-if="show2"> {{ text }} 2 </p>
-        <p v-if="show3"> {{ text }} 3 </p>
-        <button v-on:click="toggleElem1"> {{ show1 ? 'Hide' : 'Show' }} </button>
-        <button v-on:click="toggleElem2"> {{ show2 ? 'Hide' : 'Show' }} </button>
-        <button v-on:click="toggleElem3"> {{ show3 ? 'Hide' : 'Show' }} </button>
+        <p v-if="hello"> Привет, {{ name }}! </p>
+        <p v-else="hello"> Пока, {{ name }}! </p>
+    
 
     </div>
 </body>
