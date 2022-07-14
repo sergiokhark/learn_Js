@@ -12,11 +12,9 @@
 <body>
     <div id="app">
  
-       <ul v-if="show">
-        <li v-for="elem in arr"> {{ elem }}</li>
-       </ul>
-       <button v-on:click="toggleUl">Push</button>
-
+        <p v-if="show">Text1</p>
+        <p v-if="!show">Text2</p>
+        <button v-on:click="toggleElem">Push</button>
 
 
     </div>
