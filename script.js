@@ -1,17 +1,13 @@
 let app = new Vue({
 	el: '#app',
 	data: {
-		showName: true,
-		name: 'Вася'
+		show: true,
+		text: 'text1'
 	},
 	methods: {
-		hideElem: function () {
-			this.showName = false
+		toggleElem: function () {
+			this.show = !this.show
 		},
-		showElem: function () {
-			this.showName = true
-		}
 	}
-	
 });
 
