@@ -13,10 +13,14 @@
     <div id="app">
  
     
-       
-        <p v-if="age < 18">подросток</p>
-        <p v-else-if="age >= 19 && age <= 25">молодой человек</p>
-        <p v-else>мужчина</p>
+       <template v-if="show">
+            <p>1323</p>
+            <p>1323</p>
+            <p>1323</p>
+       </template>
+        
+
+        <button v-on:click="showHide">Push</button>
         
     
         

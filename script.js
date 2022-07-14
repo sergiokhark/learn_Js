@@ -1,7 +1,12 @@
 let app = new Vue({
 	el: '#app',
 	data: {
-		age: 29,
+		show: true,
 	},
+	methods: {
+		showHide: function () {
+			this.show = !this.show
+		}
+	}
 });
 
