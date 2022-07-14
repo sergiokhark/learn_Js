@@ -1,13 +1,14 @@
 let app = new Vue({
 	el: '#app',
 	data: {
-		show: true,
-		text: 'text1'
+		arr: [12, 18, 33, 14, 4, 5, 6],
+		show: false,
 	},
 	methods: {
-		toggleElem: function () {
+		toggleUl: function () {
 			this.show = !this.show
-		},
-	}
+		}
+		
+	},
 });
 

@@ -12,8 +12,10 @@
 <body>
     <div id="app">
  
-       <p v-if="show">{{ text }}</p>
-       <button v-on:click="toggleElem">Push</button>
+       <ul v-if="show">
+        <li v-for="elem in arr"> {{ elem }}</li>
+       </ul>
+       <button v-on:click="toggleUl">Push</button>
 
 
 
