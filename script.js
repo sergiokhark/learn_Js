@@ -1,9 +1,14 @@
 let app = new Vue({
 	el: '#app',
 	data: {
-		showName: false,
+		showName: true,
 		name: 'Вася'
 	},
+	methods: {
+		hideElem: function () {
+			this.showName = false
+		}
+	}
 	
 });
 
