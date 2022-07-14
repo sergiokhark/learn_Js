@@ -5,7 +5,7 @@ let app = new Vue({
 	},
 	methods: {
 		addElem: function() {
-			this.arr.push('!!!')
+			this.arr.shift()
 		}
 	}
 });
