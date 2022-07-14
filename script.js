@@ -1,11 +1,13 @@
 let app = new Vue({
 	el: '#app',
 	data: {
-		products: [
-			{name: 'product1', price: 100, quantity: 5},
-			{name: 'product2', price: 200, quantity: 4},
-			{name: 'product3', price: 300, quantity: 3},
-]
+		num1: 1,
+		num2: 2,
+	},
+	methods: {
+		sum: function () {
+			alert(this.num1 + this.num2)
+		}
 	}
 })
 
