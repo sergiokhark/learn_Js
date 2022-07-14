@@ -13,8 +13,8 @@
     <div id="app">
  
        <p v-if="showName"> {{ name }}</p>
-       <button v-on:click="hideElem">Hide</button>
-       <button v-on:click="showElem">Show</button>
+       <button v-if="showName" v-on:click="hideElem">Hide</button>
+       <button v-if="!showName" v-on:click="showElem">Show</button>
 
 
 
