@@ -7,6 +7,9 @@ let app = new Vue({
 	methods: {
 		hideElem: function () {
 			this.showName = false
+		},
+		showElem: function () {
+			this.showName = true
 		}
 	}
 	
