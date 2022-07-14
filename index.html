@@ -13,7 +13,7 @@
     
     <div id="app">
         <ul>
-            <li v-for="elem in hrefs"><a :href="elem.href">  {{elem.text}} </a></li>
+            <li v-for="product in products"> {{ product.name }}, цена: {{ product.price }}, количество: {{ product.quantity }}, сумма: {{ product.price * product.quantity }} </li>
         </ul>
         
         

@@ -1,11 +1,11 @@
 let app = new Vue({
 	el: '#app',
 	data: {
-		hrefs: [
-			{href: '1.html', text: 'ссылка 1'},
-			{href: '2.html', text: 'ссылка 2'},
-			{href: '3.html', text: 'ссылка 3'},
-		],
+		products: [
+			{name: 'product1', price: 100, quantity: 5},
+			{name: 'product2', price: 200, quantity: 4},
+			{name: 'product3', price: 300, quantity: 3},
+]
 	}
 })
 
