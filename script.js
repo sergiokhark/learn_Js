@@ -1,11 +1,11 @@
 let app = new Vue({
 	el: '#app',
 	data: {
-		text: '12345',
+		arr: [12, 14, 16, 18, 24, 25],
 	},
 	methods: {
-		changeMessage: function() {
-			this.text = 'abcde';
+		addElem: function() {
+			this.arr.push('!!!')
 		}
 	}
 });

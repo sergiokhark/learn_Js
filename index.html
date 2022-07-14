@@ -12,8 +12,11 @@
 <body>
     
     <div id="app">
-        <p>{{ text }}</p>
-        <button v-on:click="changeMessage"> Change</button>
+        <ul>
+            <li v-for="elem in arr">{{ elem }}</li>
+            <button v-on:click="addElem">Add element</button>
+        </ul>
+
     </div>
     
 </body>
