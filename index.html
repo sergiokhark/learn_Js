@@ -12,7 +12,8 @@
 <body>
     <div id="app">
  
-       <li v-for="(elem, index) in arr" v-on:click="addElem(index)">{{ elem }}</li>
+       <p v-if="show">Абзац 1</p>
+       <p v-if="!show">Абзац2</p>
 
 
 
