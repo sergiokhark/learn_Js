@@ -12,10 +12,8 @@
 <body>
     <div id="app">
  
-        <p v-if="show">Text1</p>
-        <p v-if="!show">Text2</p>
-        <button v-on:click="toggleElem">Push</button>
-
+        <p v-if="show"> {{ text }}</p>
+        <button v-on:click="toggleElem">{{ show ? 'Hide' : 'Show' }}</button>
 
     </div>
 </body>

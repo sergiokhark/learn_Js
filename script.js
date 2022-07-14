@@ -1,7 +1,7 @@
 let app = new Vue({
 	el: '#app',
 	data: {
-		
+		text: 'value',
 		show: true,
 	},
 	methods: {
