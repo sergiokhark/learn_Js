@@ -1,14 +1,19 @@
 let app = new Vue({
 	el: '#app',
 	data: {
-		arr: [12, -14, 16, 8, 3, -2, 9],
+		text: 'cтрока',
 	},
 	methods: {
-		arrFiltered: function() {
-			this.arr = this.arr.filter(function (elem) {
-				return elem > 0 && elem < 10
-			})
+		upperCaseFirst: function () {
+			this.text = this.text[0].toUpperCase() + this.text.slice(1)
 		},
+		upperCaseLast: function () {
+			this.text = this.text.slice(0, this.text.length - 1) + this.text[this.text.length - 1].toUpperCase()
+		},
+		upperCase: function () {
+			this.upperCaseFirst()
+			this.upperCaseLast()
+		}
 	}
 });
 
