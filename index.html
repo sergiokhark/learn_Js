@@ -10,13 +10,13 @@
 </head>
 
 <body>
-    
     <div id="app">
-        <button v-on:click="sayHello('Вася')">Say Hello to Vasya</button>
-        <button v-on:click="sayHello('Петя')">Say Hello to Petya</button>
+ 
+       <li v-for="(elem, index) in arr" v-on:click="removeElem(index)">{{ elem }}</li>
+
+
 
     </div>
-    
 </body>
 <script src="https://cdn.jsdelivr.net/npm/vue@2.7.0/dist/vue.js"></script>
 <script src="script.js"></script>
