@@ -1,18 +1,7 @@
 let app = new Vue({
 	el: '#app',
 	data: {
-		str: '',
-		arr: [],
-		
-		
+		checked: true,
 	},
-	methods: {
-		getWords: function () {
-			this.arr = this.str.split(' ')
-		
-		}
-		
-		
-	}
 });
 

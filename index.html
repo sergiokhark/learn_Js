@@ -12,11 +12,8 @@
 <body>
     <div id="app">
  
-        <textarea v-model="str" name="" id="" cols="30" rows="10"></textarea>
-        <button v-on:click="getWords">Push</button>
-        <ul>
-            <li v-for="item in arr"> {{item}}</li>
-        </ul>
+        <input type="checkbox" v-model="checked">
+        <p v-if="checked">Text</p>
         
         
     
