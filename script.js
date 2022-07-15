@@ -1,15 +1,18 @@
 let app = new Vue({
 	el: '#app',
 	data: {
-		arr: [4, 8, 12, 15, 18, 22],
-		inputValue: '',
+		str: '',
+		arr: [],
+		
 		
 	},
 	methods: {
-		addItem: function () {
-			this.arr.push(this.inputValue)
-			
+		getWords: function () {
+			this.arr = this.str.split(' ')
+		
 		}
+		
+		
 	}
 });
 
