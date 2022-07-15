@@ -1,7 +1,8 @@
 let app = new Vue({
 	el: '#app',
 	data: {
-		type: ''
+		arr: ['Киев', 'Харьков', 'Одесса', 'Полтава'],
+		selected: 'Киев'
 	},
 });
 

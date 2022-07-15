@@ -12,13 +12,10 @@
 <body>
     <div id="app">
 
-        <input name="radio" type="radio" v-model="type" value="один"><p>Text1</p>
-        <input name="radio" type="radio" v-model="type" value="два"><p>Text2</p>
-        <input name="radio" type="radio" v-model="type" value="три"><p>Text3</p>
-        <p v-if="type == 'один'">Text1</p>
-        <p v-else-if="type == 'два'">Text2</p>
-        <p v-else-if="type == 'три'">Text3</p>
-        
+        <select v-model="selected">
+            <option v-for="item in arr"> {{ item }}</option>
+        </select>
+        <p>Вы выбрали: {{ selected }} </p>
 
 
     </div>
