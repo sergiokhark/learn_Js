@@ -11,13 +11,14 @@
 
 <body>
     <div id="app">
- 
-        <input type="checkbox" v-model="checked">
-        <p v-if="checked">Text</p>
-        
-        
-    
-        
+
+        <input type="checkbox" v-model="lang" value="html">
+        <input type="checkbox" v-model="lang" value="css">
+        <input type="checkbox" v-model="lang" value="js">
+        <ul>
+            <li v-for="item in lang"> {{ item }}</li>
+        </ul>
+
 
     </div>
 </body>
