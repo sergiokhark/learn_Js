@@ -1,11 +1,12 @@
 let app = new Vue({
 	el: '#app',
 	data: {
-		show: true,
+		num: null,
+		result: null,
 	},
 	methods: {
-		showHide: function () {
-			this.show = !this.show
+		calc: function () {
+			this.result = Math.sqrt(this.num)
 		}
 	}
 });

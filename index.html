@@ -12,20 +12,12 @@
 <body>
     <div id="app">
  
-    
-       <template v-if="show">
-            <p>1323</p>
-            <p>1323</p>
-            <p>1323</p>
-       </template>
+        <input v-model="num">
+        <button v-on:click="calc">Calculate</button>
+        <p>Result: {{ result }}</p>
         
+    
 
-        <button v-on:click="showHide">Push</button>
-        
-    
-        
-        
-    
 
     </div>
 </body>
