@@ -12,10 +12,8 @@
 <body>
     <div id="app">
 
-        <select v-model="selected">
-            <option v-for="item in arr"> {{ item }}</option>
-        </select>
-        <p>Вы выбрали: {{ selected }} </p>
+        <input :disabled="isDisabled" type="text">
+        <button @click="getLock">Lock/Unlock</button>
 
 
     </div>
