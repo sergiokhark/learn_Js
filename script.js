@@ -1,12 +1,13 @@
 let app = new Vue({
 	el: '#app',
 	data: {
-		num: null,
+		num1: null,
+		num2: null,
 		result: null,
 	},
 	methods: {
 		calc: function () {
-			this.result = Math.sqrt(this.num)
+			this.result = Number(this.num1) + Number(this.num2)
 		}
 	}
 });
