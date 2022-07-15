@@ -1,18 +1,13 @@
 let app = new Vue({
 	el: '#app',
 	data: {
+		arr: [4, 8, 12, 15, 18, 22],
 		inputValue: '',
-		p1: '',
-		p2: '',
-		p3: '',
 		
 	},
 	methods: {
-		calc: function () {
-			let arr = this.inputValue.split(' ')
-			this.p1 = arr[0]
-			this.p2 = arr[1]
-			this.p3 = arr[2]
+		addItem: function () {
+			this.arr.push(this.inputValue)
 			
 		}
 	}
