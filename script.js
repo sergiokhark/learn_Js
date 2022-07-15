@@ -1,13 +1,16 @@
 let app = new Vue({
 	el: '#app',
 	data: {
-		num1: null,
-		num2: null,
-		result: null,
+		str1: '',
+		str1: '',
+		
 	},
 	methods: {
 		calc: function () {
-			this.result = Number(this.num1) + Number(this.num2)
+			let box = this.str1
+			this.str1 = this.str2
+			this.str2 = box
+			
 		}
 	}
 });
