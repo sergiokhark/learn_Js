@@ -1,15 +1,9 @@
 let app = new Vue({
 	el: '#app',
 	data: {
-		temp: null,
+		compNum: 56,
+		userNum: 0,
 	},
-	methods: {
-		calc: function (temp) {
-			return (temp - 32) * 5/9
-		}
-	}
 	
-	
-
 });
 

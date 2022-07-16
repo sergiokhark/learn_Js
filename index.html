@@ -12,9 +12,10 @@
 <body>
     <div id="app">
 
-        <input v-model="temp" type="text">
-        <p>{{ calc(temp) }}</p>
-        
+        <input v-model="userNum" type="text">
+        <p v-if="userNum < compNum"> Ввведите число побольше </p>
+        <p v-if="userNum > compNum"> Ввведите число поменьше </p>
+        <p v-if="userNum == compNum"> Вы угадали число </p>
 
     </div>
 </body>
