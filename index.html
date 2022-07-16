@@ -12,7 +12,8 @@
 <body>
     <div id="app">
 
-        <p v-bind:class="{valid: isValid, invalid: !isValid}">Абзац</p>
+        <p :style="{color: color}">Абзац</p>
+        <button @click="changeCSS">Push</button>
         
 
     </div>
