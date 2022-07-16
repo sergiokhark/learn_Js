@@ -15,6 +15,19 @@ let app = new Vue({
 				td.innerHTML = elem
 				tr.appendChild(td)
 			}
+
+			let td = document.createElement('td')
+			let link = document.createElement('a')
+			link.innerHTML = 'Delete'
+			link.href = '#'
+			td.appendChild(link)
+			tr.appendChild(td)
+			
+			link.addEventListener('click', function () {
+				table.removeChild(tr)
+				
+			})
+
 			table.appendChild(tr)
 			this.total += this.price * this.quantity
 		}
