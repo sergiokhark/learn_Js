@@ -18,7 +18,7 @@
         <input v-model="name">
         <input v-model="price">
         <input v-model="quantity">
-        <button v-on:click="addProduct">Add product</button>
+        <button v-on:click="addProduct(name, price, quantity, price * quantity)">Add product</button>
         <p>Общая сумма {{ total }}</p>
 
     </div>
