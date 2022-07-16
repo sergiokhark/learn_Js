@@ -1,14 +1,11 @@
 let app = new Vue({
 	el: '#app',
 	data: {
-		color: 'yellow',
+		checked: false,
+	
 		
 	},
-	methods: {
-		changeCSS: function () {
-			this.color = 'red'
-		}
-	}
+	
 	
 
 });

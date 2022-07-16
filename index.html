@@ -12,8 +12,9 @@
 <body>
     <div id="app">
 
-        <p :style="{color: color}">Абзац</p>
-        <button @click="changeCSS">Push</button>
+        <input v-model="checked" type="checkbox">
+       
+        <p :class="{colred: checked, colgreen: !checked}">Text</p>
         
 
     </div>
