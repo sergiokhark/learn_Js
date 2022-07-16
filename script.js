@@ -1,12 +1,20 @@
 let app = new Vue({
 	el: '#app',
 	data: {
-		users: [
-			{name: 'Коля', age: 30},
-			{name: 'Вася', age: 40},
-			{name: 'Петя', age: 50},
-		]
+		products: [],
+		name: '',
+		price: '',
+		quantity: '',
+		sum: 0
 	},
+	methods: {
+		addProduct: function () {
+			this.products.push({ name: this.name, price: this.price, quantity: this.quantity })
+			this.sum += this.price * this.quantity
+		},
+		
+		
+	}
 	
-});
+})
 
