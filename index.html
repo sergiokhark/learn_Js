@@ -12,9 +12,16 @@
 <body>
     <div id="app">
 
-        <ul>
-            <li v-for="user of users" :class="{colgreen: user.active, colred: !user.active}"> {{ user.name }} </li>
-        </ul>
+        <table>
+            <tr v-for="product in products">
+                <td> {{ product.name }} </td> 
+                <td> {{ product.price }} </td> 
+                <td> {{ product.quantity }} </td>
+                <td> {{ product.price * product.quantity }}</td>
+            </tr>
+            
+        </table>
+        <p>Общая сумма {{ calc() }}</p>
 
     </div>
 </body>
