@@ -13,15 +13,13 @@
     <div id="app">
 
         <table>
-            <tr v-for="product in products">
-                <td> {{ product.name }} </td> 
-                <td> {{ product.price }} </td> 
-                <td> {{ product.quantity }} </td>
-                <td> {{ product.price * product.quantity }}</td>
-            </tr>
-            
+             
         </table>
-        <p>Общая сумма {{ calc() }}</p>
+        <input v-model="name">
+        <input v-model="price">
+        <input v-model="quantity">
+        <button v-on:click="addProduct">Add product</button>
+        <p>Общая сумма {{ total }}</p>
 
     </div>
 </body>

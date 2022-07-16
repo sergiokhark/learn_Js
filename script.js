@@ -1,19 +1,30 @@
 let app = new Vue({
 	el: '#app',
 	data: {
-		products: [
-			{name: 'product1', price: 100, quantity: 4},
-			{name: 'product2', price: 200, quantity: 5},
-			{name: 'product3', price: 300, quantity: 6},
-		]
+		name: '',
+		price: '',
+		quantity: '',
+		total: 0
 	},
 	methods: {
-		calc: function () {
-			let sum = 0
-			for (let product of this.products) {
-				sum += product.price * product.quantity
-			}
-			return sum
+		addProduct: function () {
+			let table = document.querySelector('table')
+			let tr = document.createElement('tr')
+			let td1 = document.createElement('td')
+			td1.innerHTML = this.name
+			let td2 = document.createElement('td')
+			td2.innerHTML = this.price
+			let td3 = document.createElement('td')
+			td3.innerHTML = this.quantity
+			let td4 = document.createElement('td')
+			td4.innerHTML = this.price * this.quantity
+			tr.appendChild(td1)
+			tr.appendChild(td2)
+			tr.appendChild(td3)
+			tr.appendChild(td4)
+			table.appendChild(tr)
+
+			this.total += this.price * this.quantity
 		}
 	}
 });
