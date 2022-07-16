@@ -12,9 +12,8 @@
 <body>
     <div id="app">
 
-        <input v-model="checked" type="checkbox">
-       
-        <p :class="{colred: checked, colgreen: !checked}">Text</p>
+        <input v-model="temp" type="text">
+        <p>{{ calc(temp) }}</p>
         
 
     </div>
