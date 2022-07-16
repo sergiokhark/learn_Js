@@ -1,13 +1,8 @@
 let app = new Vue({
 	el: '#app',
 	data: {
-		isDisabled: false,
-		checked: false
+		cssClasses: 'www ttt',
 	},
-	methods: {
-		getLock: function () {
-			this.isDisabled = !this.isDisabled
-		}
-	}
+	
 });
 
