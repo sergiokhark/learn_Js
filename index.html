@@ -12,10 +12,9 @@
 <body>
     <div id="app">
 
-        <input v-model="userNum" type="text">
-        <p v-if="userNum < compNum"> Ввведите число побольше </p>
-        <p v-if="userNum > compNum"> Ввведите число поменьше </p>
-        <p v-if="userNum == compNum"> Вы угадали число </p>
+        <ul>
+            <li v-for="user of users" :class="{colgreen: user.active, colred: !user.active}"> {{ user.name }} </li>
+        </ul>
 
     </div>
 </body>

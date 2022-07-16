@@ -1,8 +1,11 @@
 let app = new Vue({
 	el: '#app',
 	data: {
-		compNum: 56,
-		userNum: 0,
+		users: [
+			{name: 'Коля', active: true},
+			{name: 'Вася', active: true},
+			{name: 'Петя', active: false},
+		]
 	},
 	
 });
