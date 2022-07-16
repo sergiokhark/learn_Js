@@ -1,7 +1,8 @@
 let app = new Vue({
 	el: '#app',
 	data: {
-		cssClasses: 'www ttt',
+		isValid: true,
+		isDone: false,
 	},
 	
 });
