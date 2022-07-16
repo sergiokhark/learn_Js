@@ -12,8 +12,8 @@
 <body>
     <div id="app">
 
-        <p :class="{valid: isValid, 'task-done': isDone}">Text</p>
-        <button v-on:click="changeCSS">Push</button>
+        <p v-bind:class="{valid: isValid, invalid: !isValid}">Абзац</p>
+        
 
     </div>
 </body>
