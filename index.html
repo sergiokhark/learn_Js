@@ -12,14 +12,9 @@
 <body>
     <div id="app">
 
-        <table>
-             
-        </table>
-        <input v-model="name">
-        <input v-model="price">
-        <input v-model="quantity">
-        <button v-on:click="addProduct(name, price, quantity, price * quantity)">Add product</button>
-        <p>Общая сумма {{ total }}</p>
+        <ul>
+            <li v-for="user in users">{{ user.name }} {{ user.age }}</li>
+        </ul>
 
     </div>
 </body>
