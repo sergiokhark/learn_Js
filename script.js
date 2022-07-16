@@ -4,6 +4,11 @@ let app = new Vue({
 		isValid: true,
 		isDone: false,
 	},
+	methods: {
+		changeCSS: function () {
+			this.isDone = !this.isDone
+		}
+	}
 	
 });
 
