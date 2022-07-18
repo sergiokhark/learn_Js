@@ -11,26 +11,8 @@
 
 <body>
     <div id="app">
-        <table>
-            
-            <tr v-for="(product, index) in products">
-                <td @click="getEdit(index)"><input v-if="product.edit" @blur="hideEdit(index)" v-model="product.name"><template v-if="!product.edit"> {{ product.name }} </template></td>
-                <td @click="getEdit(index)"><input v-if="product.edit" @blur="hideEdit(index)" v-model="product.price"><template v-if="!product.edit"> {{ product.price }} </template></td>
-                <td @click="getEdit(index)"><input v-if="product.edit" @blur="hideEdit(index)" v-model="product.quantity"><template v-if="!product.edit"> {{ product.quantity }} </template></td>
-                <td> {{ product.price * product.quantity }} </td>
-                <td><a href="#" @click="delProduct(index)">Удалить</a> </td>
-                
-            </tr>
         
-        </table>
-
-        <input v-model="name">
-        <input v-model="price">
-        <input v-model="quantity">
-
-        <button @click="addProduct">Add product</button>
-
-        <p>Общая сумма {{ total }}</p>
+        <p>{{ str | capitalizeWords }}</p>
 
     </div>
 </body>
