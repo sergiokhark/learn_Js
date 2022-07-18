@@ -1,17 +1,11 @@
 let app = new Vue({
 	el: '#app',
 	data: {
-		str: 'london is the capital of'
+		str: 'год-месяц-день'
 	},
 	filters: {
-		capitalizeWords: function (str) {
-			let result = []
-			let arr = str.split(' ')
-			for (let elem of arr) {
-				result.push(elem[0].toUpperCase() + elem.slice(1))
-			}
-			return result.join(' ')
-		
+		formatDate: function (str) {
+			return str.split('-').reverse().join('.')
 		}
 	}
 })
