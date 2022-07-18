@@ -14,9 +14,9 @@
         <table>
             
             <tr v-for="(product, index) in products">
-                <td> {{ product.name }} </td>
-                <td> {{ product.price }} </td>
-                <td> {{ product.quantity }} </td>
+                <td @click="getEdit(index)"><input v-if="product.edit" @blur="hideEdit(index)" v-model="product.name"><template v-if="!product.edit"> {{ product.name }} </template></td>
+                <td @click="getEdit(index)"><input v-if="product.edit" @blur="hideEdit(index)" v-model="product.price"><template v-if="!product.edit"> {{ product.price }} </template></td>
+                <td @click="getEdit(index)"><input v-if="product.edit" @blur="hideEdit(index)" v-model="product.quantity"><template v-if="!product.edit"> {{ product.quantity }} </template></td>
                 <td> {{ product.price * product.quantity }} </td>
                 <td><a href="#" @click="delProduct(index)">Удалить</a> </td>
                 

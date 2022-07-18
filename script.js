@@ -5,11 +5,11 @@ let app = new Vue({
 		name: '',
 		price: '',
 		quantity: '',
-		total: null
+		total: null,
 	},
 	methods: {
 		addProduct: function () {
-			this.products.push({ name: this.name, price: this.price, quantity: this.quantity })
+			this.products.push({ name: this.name, price: this.price, quantity: this.quantity, edit: false })
 			this.getSum()
 		},
 		delProduct: function (index) {
@@ -22,7 +22,14 @@ let app = new Vue({
 				sum += product.price * product.quantity	
 			}
 			this.total = sum
-			
+		},
+		getEdit: function (index) {
+			this.products[index].edit = true
+			this.getSum()
+		},
+		hideEdit: function (index) {
+			this.products[index].edit = false
+			this.getSum()
 		}
 	}
 })
