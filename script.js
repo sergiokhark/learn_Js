@@ -4,8 +4,8 @@ let app = new Vue({
 		str: 'год-месяц-день'
 	},
 	filters: {
-		formatDate: function (str) {
-			return str.split('-').reverse().join('.')
+		formatDate: function (value) {
+			return value.split('-').reverse().join('.')
 		}
 	}
 })
