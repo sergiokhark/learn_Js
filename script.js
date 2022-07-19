@@ -1,11 +1,11 @@
 let app = new Vue({
 	el: '#app',
 	data: {
-		num: '',
+		num: null,
 	},
 	computed: {
-		numSquare: function () {
-			return this.num ** 2
+		localeNum: function () {
+			return Number(this.num).toLocaleString()
 		}
 	}
 	
