@@ -12,8 +12,8 @@
 <body>
     <div id="app">
 
-   <input type="text" v-model="text" @keyup.enter="addText">
-   <p v-if="show"> {{ text }}</p>
+    <a href="#" @click.left="leftClick" @click.middle="middleClick" @click.right="rightClick">Link</a>
+    <p v-if="show"> {{ text }}</p>
 
 
     </div>
