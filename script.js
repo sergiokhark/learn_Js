@@ -1,11 +1,12 @@
 let app = new Vue({
 	el: '#app',
 	data: {
-		text: 'Hello',
+		text: '',
+		show: false
 	},
 	methods: {
 		addText: function () {
-			this.text = '123'
+			this.show = true
 		}
 	}
 	

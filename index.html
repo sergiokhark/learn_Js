@@ -11,10 +11,10 @@
 
 <body>
     <div id="app">
-        
-    <p v-once>{{ text }}</p>
-    <p>{{ text }}</p>
-    <button @click="addText">Push</button>
+
+   <input type="text" v-model="text" @keyup.enter="addText">
+   <p v-if="show"> {{ text }}</p>
+
 
     </div>
 </body>
