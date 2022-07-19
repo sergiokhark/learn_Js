@@ -1,11 +1,11 @@
 let app = new Vue({
 	el: '#app',
 	data: {
-		str: '',
+		text: 'Hello',
 	},
 	methods: {
 		addText: function () {
-			alert('Hello')
+			this.text = '123'
 		}
 	}
 	

@@ -12,7 +12,9 @@
 <body>
     <div id="app">
         
-    <button @click.once="addText">Push</button>
+    <p v-once>{{ text }}</p>
+    <p>{{ text }}</p>
+    <button @click="addText">Push</button>
 
     </div>
 </body>
