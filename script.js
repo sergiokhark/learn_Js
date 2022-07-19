@@ -1,12 +1,14 @@
 let app = new Vue({
 	el: '#app',
 	data: {
-		str: 'год-месяц-день'
+		name: 'Ivan',
+		surname: 'Ivanov',
 	},
-	filters: {
-		formatDate: function (value) {
-			return value.split('-').reverse().join('.')
+	computed: {
+		fullName: function () {
+			return this.name + ' '+ this.surname
 		}
 	}
+	
 })
 
