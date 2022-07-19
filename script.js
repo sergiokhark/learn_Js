@@ -1,11 +1,11 @@
 let app = new Vue({
 	el: '#app',
 	data: {
-		num: null,
+		str: '',
 	},
-	computed: {
-		localeNum: function () {
-			return Number(this.num).toLocaleString()
+	methods: {
+		addText: function () {
+			this.str = 'Hello'
 		}
 	}
 	
