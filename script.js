@@ -1,12 +1,11 @@
 let app = new Vue({
 	el: '#app',
 	data: {
-		name: 'Ivan',
-		surname: 'Ivanov',
+		num: '',
 	},
 	computed: {
-		fullName: function () {
-			return this.name + ' '+ this.surname
+		numSquare: function () {
+			return this.num ** 2
 		}
 	}
 	
