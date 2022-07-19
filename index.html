@@ -12,9 +12,11 @@
 <body>
     <div id="app">
 
-    <a href="#" @click.left="leftClick" @click.middle="middleClick" @click.right="rightClick">Link</a>
-    <p v-if="show"> {{ text }}</p>
+        <div v-for="(objElem, index) of tasks">
+            <p :class="{completeTask: !objElem.show}" @dblclick="getEdit(index)"><input type="checkbox" @click="completeTask(index)" v-if="objElem.show"> <input v-if="!objElem.showEdit" type="text" v-model="objElem.task" @keyup.enter="completeEdit(index)"> <template v-if="objElem.showEdit">{{ objElem.task }}</template><img src="img/del.png" class="imgFormat" alt="" @click="delTask(index)"></p>
+        </div>   
 
+        <input type="text" @keyup.enter="addTask" v-model="task">
 
     </div>
 </body>

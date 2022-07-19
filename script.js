@@ -1,21 +1,26 @@
 let app = new Vue({
 	el: '#app',
 	data: {
-		text: '',
-		show: false
+		tasks: [],
+		task: '',
+		show: true,
 	},
 	methods: {
-		leftClick: function () {
-			this.text = 'left'
-			this.show = true
+		addTask: function () {
+			this.tasks.push({task: this.task, show: this.show, showEdit: this.show})
+			this.task = ''
 		},
-		middleClick: function () {
-			this.text = 'middle'
-			this.show = true
+		completeTask: function (index) {
+			this.tasks[index].show = false
 		},
-		rightClick: function () {
-			this.text = 'right'
-			this.show = true
+		delTask: function (index) {
+			this.tasks.splice(index, 1)
+		},
+		getEdit: function (index) {
+			this.tasks[index].showEdit = false
+		},
+		completeEdit: function (index) {
+			this.tasks[index].showEdit = true
 		}
 
 	}

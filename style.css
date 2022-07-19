@@ -12,10 +12,12 @@ td {
     border: 1px solid black;
 }
 
-.active {
-    background: blue;
+.completeTask {
+    text-decoration: line-through;
+    color: gray;
 }
 
-.decorated {
-    text-decoration: line-through;
+.imgFormat {
+    height: 15px;
+    width: 15px;
 }
