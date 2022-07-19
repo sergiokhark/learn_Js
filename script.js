@@ -5,7 +5,7 @@ let app = new Vue({
 	},
 	methods: {
 		addText: function () {
-			this.str = 'Hello'
+			alert('Hello')
 		}
 	}
 	
