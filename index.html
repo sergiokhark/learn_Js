@@ -13,15 +13,24 @@
     <div id="app">
         <table>
             <tr>
-                <td v-for="(value, index) in shedule" :key="index">
-                    <p @click="showTasks(index)"> {{ index + 1 }}</p>
-                    <div v-if="value.show">
-                        <p v-for="(task, taskIndex) of value.tasks" :class="{completeTask: task.show}" @dblclick="editTask(index, taskIndex)"><input type="checkbox" @click="completeTask(index, taskIndex)"><input type="text" v-if="task.showEdit" v-model="task.task" @keyup.enter="completeEdit(index, taskIndex)"><templete v-if="!task.showEdit">{{ task.task }}</templete><img src="img/del.png" alt="" @click="delTask(index, taskIndex)"></p>
-                        <input type="text" v-model="task" @keyup.enter="addTask(index)">
+                <td>
+                    <div v-for="(note, index) in notes">
+                        <br>
+                        <a href="#" @click="showNote(index)">{{ note.date }}</a>
                     </div>
+                </td>
+                <td>
+                    <textarea name="" id="" cols="30" rows="10" v-model="note"></textarea>
+                    <br>
+                    <button @click="addNote">Add</button>
                 </td>
             </tr>
         </table>
+        <div>
+            
+        </div>
+        
+        
 
     </div>
 </body>

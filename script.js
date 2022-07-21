@@ -1,42 +1,27 @@
 let app = new Vue({
 	el: '#app',
 	data: {
-		task: '',
-		shedule: [],
-		show: false,
-	},
-	computed: {
-		countDaysInMonths() {
-			return new Date(new Date().getFullYear(), new Date().getMonth(), 0).getDate()
-		},
-	},
-	created() {
-		for (let i = 1; i <= this.countDaysInMonths; i++) {
-			this.shedule.push({tasks: [], show: false})
-		}
+		timeCreate: '',
+		notes: [],
+		note: '',
 	},
 	methods: {
-		showTasks: function (index) {
-			this.shedule[index].show = !this.shedule[index].show
+		addNote: function () {
+			let now = new Date()
+			let date = this.normalizeDate(now.getDate()) + '.' + this.normalizeDate((now.getMonth() + 1)) + '.' + now.getFullYear() + '-' + this.normalizeDate(now.getHours()) + ':' + this.normalizeDate(now.getMinutes())
+			this.notes.push({date: date, note: this.note})
+			this.note = ''
 		},
-		addTask: function (index) {
-			this.shedule[index].tasks.push({task: this.task, show: false, showEdit: false})
-			this.task = ''
+		showNote: function (index) {
+			this.note = this.notes[index].note
 		},
-		completeTask: function (index, taskIndex) {
-			this.shedule[index].tasks[taskIndex].show = !this.shedule[index].tasks[taskIndex].show
-		},
-		delTask: function (index, taskIndex) {
-			this.shedule[index].tasks.splice(taskIndex, 1)
-		},
-		editTask: function (index, taskIndex) {
-			this.shedule[index].tasks[taskIndex].showEdit = true
-		},
-		completeEdit: function (index, taskIndex) {
-			this.shedule[index].tasks[taskIndex].showEdit = false
+		normalizeDate: function (num) {
+			if (num < 10) {
+				num = '0' + num
+			}
+			return num
 		}
-
 	}
-	
+		
 })
 
