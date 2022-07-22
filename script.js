@@ -1,27 +1,57 @@
 let app = new Vue({
 	el: '#app',
 	data: {
-		timeCreate: '',
-		notes: [],
-		note: '',
+		questions: [
+			{
+				question: 'Вопрос 1',
+				answers: [
+					'Ответ 1',
+					'Ответ 2',
+					'Ответ 3',
+					'Ответ 4',
+					'Ответ 5',
+				],
+				right: 3, 
+				userAnswer: '',
+				radioValue: null,
+			},
+			{
+				question: 'Вопрос 2',
+				answers: [
+					'Ответ 1',
+					'Ответ 2',
+					'Ответ 3',
+					'Ответ 4',
+					'Ответ 5',
+				],
+				right: 1, 
+				userAnswer: '',
+				radioValue: null,
+			},
+			{
+				question: 'Вопрос 3',
+				answers: [
+					'Ответ 1',
+					'Ответ 2',
+					'Ответ 3',
+					'Ответ 4',
+					'Ответ 5',
+				],
+				right: 5,
+				userAnswer: '',
+				radioValue: null,
+			},
+		],
 	},
 	methods: {
-		addNote: function () {
-			let now = new Date()
-			let date = this.normalizeDate(now.getDate()) + '.' + this.normalizeDate((now.getMonth() + 1)) + '.' + now.getFullYear() + '-' + this.normalizeDate(now.getHours()) + ':' + this.normalizeDate(now.getMinutes())
-			this.notes.push({date: date, note: this.note})
-			this.note = ''
-		},
-		showNote: function (index) {
-			this.note = this.notes[index].note
-		},
-		normalizeDate: function (num) {
-			if (num < 10) {
-				num = '0' + num
+		checkAnswer (index) {
+			console.log(this.questions[index].radioValue)
+			if (this.questions[index].radioValue == this.questions[index].right) {
+				this.questions[index].userAnswer = true
+			} else {
+				this.questions[index].userAnswer = false
 			}
-			return num
 		}
-	}
-		
+	}	
 })
 

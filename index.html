@@ -11,27 +11,13 @@
 
 <body>
     <div id="app">
-        <table>
-            <tr>
-                <td>
-                    <div v-for="(note, index) in notes">
-                        <br>
-                        <a href="#" @click="showNote(index)">{{ note.date }}</a>
-                    </div>
-                </td>
-                <td>
-                    <textarea name="" id="" cols="30" rows="10" v-model="note"></textarea>
-                    <br>
-                    <button @click="addNote">Add</button>
-                </td>
-            </tr>
-        </table>
-        <div>
+       <div v-for="(value, index) in questions">
+            <p :class="{colgreen: value.userAnswer && value.userAnswer != '', colred: !value.userAnswer && value.userAnswer != ''}">{{ value.question }}</p>
+            <p v-for="(answer, indexAnswer) in value.answers"><input type="radio" :name="index" :value="indexAnswer + 1" v-model="value.radioValue" @click="checkAnswer(index)">{{ answer }}</p>   
+            <p>Проверка значения - {{value.radioValue}} </p>
             
         </div>
-        
-        
-
+     
     </div>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/vue@2.7.0/dist/vue.js"></script>
