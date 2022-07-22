@@ -13,7 +13,7 @@ let app = new Vue({
 				],
 				right: 3, 
 				userAnswer: '',
-				radioValue: null,
+				radioValue: '',
 			},
 			{
 				question: 'Вопрос 2',
@@ -26,7 +26,7 @@ let app = new Vue({
 				],
 				right: 1, 
 				userAnswer: '',
-				radioValue: null,
+				radioValue: '',
 			},
 			{
 				question: 'Вопрос 3',
@@ -39,18 +39,19 @@ let app = new Vue({
 				],
 				right: 5,
 				userAnswer: '',
-				radioValue: null,
+				radioValue: '',
 			},
 		],
 	},
 	methods: {
 		checkAnswer (index) {
-			console.log(this.questions[index].radioValue)
+			
 			if (this.questions[index].radioValue == this.questions[index].right) {
 				this.questions[index].userAnswer = true
 			} else {
 				this.questions[index].userAnswer = false
 			}
+			console.log(this.questions[index].userAnswer)
 		}
 	}	
 })

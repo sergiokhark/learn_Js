@@ -12,10 +12,8 @@
 <body>
     <div id="app">
        <div v-for="(value, index) in questions">
-            <p :class="{colgreen: value.userAnswer && value.userAnswer != '', colred: !value.userAnswer && value.userAnswer != ''}">{{ value.question }}</p>
-            <p v-for="(answer, indexAnswer) in value.answers"><input type="radio" :name="index" :value="indexAnswer + 1" v-model="value.radioValue" @click="checkAnswer(index)">{{ answer }}</p>   
-            <p>Проверка значения - {{value.radioValue}} </p>
-            
+            <p :class="{colgreen: value.userAnswer && value.radioValue != '', colred: !value.userAnswer && value.radioValue != ''}">{{ value.question }}</p>
+            <p v-for="(answer, indexAnswer) in value.answers"><input type="radio" :name="index" :value="indexAnswer + 1" v-model="value.radioValue" @change="checkAnswer(index)">{{ answer }}</p>   
         </div>
      
     </div>
