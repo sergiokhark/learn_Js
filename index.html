@@ -11,11 +11,14 @@
 
 <body>
     <div id="app">
-       <div v-for="(value, index) in questions">
-            <p :class="{colgreen: value.userAnswer && value.radioValue != '', colred: !value.userAnswer && value.radioValue != ''}">{{ value.question }}</p>
-            <p v-for="(answer, indexAnswer) in value.answers"><input type="radio" :name="index" :value="indexAnswer + 1" v-model="value.radioValue" @change="checkAnswer(index)">{{ answer }}</p>   
-        </div>
-     
+        <div v-for="(value,index) in questions">
+            <template v-if="value.showQuestion">
+                <p>{{value.question}}</p>
+                <p v-for="(answer, indexAnswer) in value.answers"><input type="checkbox">{{answer}}</p>
+                <a href="#" v-if="value.showLink" @click="toNextQuestion(index)">Следующий вопрос</a>
+                <a href="#" v-if="!value.showLink">Показать результат</a>
+            </template>
+        </div>  
     </div>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/vue@2.7.0/dist/vue.js"></script>

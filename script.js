@@ -11,9 +11,9 @@ let app = new Vue({
 					'Ответ 4',
 					'Ответ 5',
 				],
-				right: 3, 
-				userAnswer: '',
-				radioValue: '',
+				right: 3,
+				showLink: true,
+				showQuestion: true,
 			},
 			{
 				question: 'Вопрос 2',
@@ -24,9 +24,9 @@ let app = new Vue({
 					'Ответ 4',
 					'Ответ 5',
 				],
-				right: 1, 
-				userAnswer: '',
-				radioValue: '',
+				right: 1,
+				showLink: true,
+				showQuestion: false,
 			},
 			{
 				question: 'Вопрос 3',
@@ -38,21 +38,19 @@ let app = new Vue({
 					'Ответ 5',
 				],
 				right: 5,
-				userAnswer: '',
-				radioValue: '',
+				showLink: false,
+				showQuestion: false,
 			},
-		],
+		]
 	},
 	methods: {
-		checkAnswer (index) {
-			
-			if (this.questions[index].radioValue == this.questions[index].right) {
-				this.questions[index].userAnswer = true
-			} else {
-				this.questions[index].userAnswer = false
+		toNextQuestion(index) {
+			if (index < this.questions.length - 1) {
+				this.questions[index].showQuestion = false
+				this.questions[index + 1].showQuestion = true
 			}
-			console.log(this.questions[index].userAnswer)
 		}
-	}	
+			
+	}
 })
 
