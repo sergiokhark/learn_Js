@@ -14,9 +14,9 @@
         <div v-for="(value,index) in questions">
             <template v-if="value.showQuestion">
                 <p>{{value.question}}</p>
-                <p v-for="(answer, indexAnswer) in value.answers"><input type="checkbox">{{answer}}</p>
+                <p v-for="(answer, indexAnswer) in value.answers"><input type="checkbox" :value="indexAnswer" v-model="value.userAnswers">{{answer}}</p>
                 <a href="#" v-if="value.showLink" @click="toNextQuestion(index)">Следующий вопрос</a>
-                <a href="#" v-if="!value.showLink">Показать результат</a>
+                <a href="#" v-if="!value.showLink" @click.once="showResult(index)">Показать результат</a>
             </template>
         </div>  
     </div>
